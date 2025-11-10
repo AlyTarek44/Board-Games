@@ -1,0 +1,11 @@
+# Ignore everything
+*OOP_Games/cmake-build-debug/
+*OOP_Games/cmake-build-release/
+*OOP_Games/.idea/
+
+# Allow these
+!
+
+# Ignore build folders
+
+

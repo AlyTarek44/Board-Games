@@ -6,7 +6,7 @@ set(CMAKE_CXX_STANDARD 17)
 # Add the executable with the new file names
 add_executable(
         OOP_Games
-        NumTTT_Board.cpp
-        NumTTT_UI.cpp
         main.cpp
+        NUMTTT_classes.cpp
+        XO_Classes.cpp
 )

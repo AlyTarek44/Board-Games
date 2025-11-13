@@ -1,10 +1,13 @@
-#ifndef NUMTTT_BOARD_H
-#define NUMTTT_BOARD_H
+#ifndef NUMTTT_CLASSES_H
+#define NUMTTT_CLASSES_H
 
 #include "BoardGame_Classes.h"
 #include <vector>
 
 using namespace std;
+
+// Forward declaration
+class NumTTT_Board;
 
 //================================
 // Board Class Declaration
@@ -30,7 +33,7 @@ public:
     // Override virtual functions from the base Board class
     bool update_board(Move<int>* move) override;
     bool is_win(Player<int>* player) override;
-    bool is_lose(Player<int>* player) override { return false; } // Not used
+    bool is_lose(Player<int>* player) override { return false; }
     bool is_draw(Player<int>* player) override;
     bool game_is_over(Player<int>* player) override;
 
@@ -39,4 +42,30 @@ public:
     const vector<int>& get_even_nums() const { return even_nums; }
 };
 
-#endif // NUMTTT_BOARD_H
+
+//================================
+// UI Class Declaration
+//================================
+
+// Inherit from UI, specifying 'int' as the template type.
+class NumTTT_UI : public UI<int> {
+private:
+    // Pointer to the board to access available number lists
+    NumTTT_Board* board_ptr;
+
+    // Helper to print a vector of numbers
+    void print_available(const vector<int>& nums);
+
+public:
+    // Constructor now takes a pointer to the board
+    NumTTT_UI(NumTTT_Board* b);
+
+    // Override virtual functions from the base UI class
+    Player<int>* create_player(string& name, int symbol, PlayerType type) override;
+    Move<int>* get_move(Player<int>* player) override;
+
+    // We MUST override setup_players to create our specific int-based players
+    Player<int>** setup_players() override;
+};
+
+#endif // NUMTTT_CLASSES_H

@@ -1,32 +1,27 @@
 #include <iostream>
-#include <cstdlib> // For srand
-#include <ctime>   // For time
+#include <cstdlib>
+#include <ctime>
 #include "BoardGame_Classes.h"
 #include "NumTTT_Classes.h"
 #include "XO_Classes.h"
-#include "FourInRow_Classes.h"  // Add Four-in-a-row game header
+#include "FourInRow_Classes.h"
+#include "Misere_Classes.h"
 
 using namespace std;
 
 void run_numerical_ttt() {
     srand(time(0));
 
-    // 1) Create the board
     Board<int> *board = new NumTTT_Board();
 
-    // 2) Create UI
     UI<int> *ui = new NumTTT_UI(static_cast<NumTTT_Board *>(board));
 
-    // 3) Set players
     Player<int> **players = ui->setup_players();
 
-    // 4) Create GameManager
     GameManager<int> gm(board, players, ui);
 
-    // 5) Run
     gm.run();
 
-    // 6) Cleanup
     delete board;
     delete ui;
     delete players[0];
@@ -45,10 +40,8 @@ void run_XO() {
 
     GameManager<char> x_o_game(xo_board, players, game_ui);
 
-    // Run the game loop.
     x_o_game.run();
 
-    // --- Cleanup ---
     delete xo_board;
     delete game_ui;
 
@@ -79,6 +72,25 @@ void run_FourInRow() {
     delete[] players;
 }
 
+void run_Misere() {
+    srand(static_cast<unsigned int>(time(0)));
+
+    Misere_Board *board = new Misere_Board();
+    Misere_UI *ui = new Misere_UI(board);
+
+    Player<char> **players = ui->setup_players();
+
+    GameManager<char> gm(board, players, ui);
+
+    gm.run();
+
+    delete board;
+    delete ui;
+    delete players[0];
+    delete players[1];
+    delete[] players;
+}
+
 int main() {
     int choice;
 
@@ -90,6 +102,7 @@ int main() {
         cout << "1. Numerical Tic-Tac-Toe\n";
         cout << "2. 3*3 Tic-Tac-Toe\n";
         cout << "3. Four-in-a-Row\n";
+        cout << "4. Misere Tic-Tac-Toe(3x3)\n";
         cout << "0. Exit\n";
         cout << "Enter your choice: ";
 
@@ -101,20 +114,18 @@ int main() {
         }
 
         switch (choice) {
-            case 1:
-                run_numerical_ttt();
-                break;
-            case 2:
-                run_XO();
-                break;
-            case 3:
-                run_FourInRow();
-                break;
-            case 0:
-                cout << "Goodbye!\n";
-                return 0;
+            case 1:run_numerical_ttt(); break;
+
+            case 2:run_XO(); break;
+
+            case 3:run_FourInRow(); break;
+
+            case 4:run_Misere(); break;
+
+            case 0:cout << "Goodbye!\n";return 0;
+
             default:
-                cout << "Invalid choice. Please select [1,2,3,0].\n";
+                cout << "Invalid choice. Please select [1,2,3,4,0].\n";
         }
     }
 }

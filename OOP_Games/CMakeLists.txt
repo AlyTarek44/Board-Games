@@ -9,4 +9,5 @@ add_executable(
         main.cpp
         NUMTTT_classes.cpp
         XO_Classes.cpp
+        FourInRow_Classes.cpp
 )

@@ -126,7 +126,7 @@ class Player {
 protected:
     string name;         ///< Player name
     PlayerType type;     ///< Player type (e.g., HUMAN or COMPUTER)
-    T symbol;            ///< Player’s symbol on board
+    T symbol;            ///< Playerï¿½s symbol on board
     Board<T>* boardPtr;  ///< Pointer to the game board
 
 public:
@@ -218,16 +218,15 @@ public:
 
     /**
      * @brief Display the current board matrix in formatted form.
-     */
-    void display_board_matrix(const vector<vector<T>>& matrix) const {
+    */void display_board_matrix(const vector<vector<T>>& matrix) const {
         if (matrix.empty() || matrix[0].empty()) return;
 
         int rows = matrix.size();
         int cols = matrix[0].size();
 
-        cout << "\n    ";
+        cout << "\n   ";
         for (int j = 0; j < cols; ++j)
-            cout << setw(cell_width + 1) << j;
+            cout << setw(cell_width + 1) << j <<" ";
         cout << "\n   " << string((cell_width + 2) * cols, '-') << "\n";
 
         for (int i = 0; i < rows; ++i) {

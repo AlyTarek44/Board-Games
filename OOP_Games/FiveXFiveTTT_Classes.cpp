@@ -15,22 +15,17 @@ FxFTTT_board :: FxFTTT_board() : Board(5, 5) {
     }
   }
 }
-bool FxFTTT_board :: update_board(Move<char>* move){
-  int x=move->get_x();
-  int y=move->get_y();
+bool FxFTTT_board::update_board(Move<char>* move) {
+  int x = move->get_x();
+  int y = move->get_y();
   char mark = move->get_symbol();
 
-  if (!(x<0 || x>rows || y<0 || y>columns) && (board[x][y]==blank_symbol || mark== 0)){
-    if (mark == 0) { // Undo move
-      n_moves--;
-      board[x][y] = blank_symbol;
-      }
-    else {         // Apply move
-      n_moves++;
-      board[x][y] = toupper(mark);
-     }
+
+  if (x >= 0 && x < rows && y >= 0 && y < columns && board[x][y] == blank_symbol) {
+    n_moves++;
+    board[x][y] = toupper(mark);
     return true;
-    }
+  }
   return false;
 }
 
@@ -145,13 +140,23 @@ Move<char>* FxFTTT_ui::get_move(Player<char>* player) {
   int x, y;
 
   if (player->get_type() == PlayerType::HUMAN) {
+    string s;
     cout << "\nPlease enter your move x and y (0 to 4): ";
-    cin >> x >> y;
+    cin >> s;
+
+    while (s.size() != 2 || !isdigit(s[0]) || !isdigit(s[1])) {
+      cout << "Invalid input! Enter exactly two digits (ex: 02, 40): ";
+      cin >> s;
+    }
+
+    x = s[0] - '0';
+    y = s[1] - '0';
   }
-  else if (player->get_type() == PlayerType::COMPUTER) {
+  else {
     x = rand() % player->get_board_ptr()->get_rows();
     y = rand() % player->get_board_ptr()->get_columns();
   }
+
   return new Move<char>(x, y, player->get_symbol());
 }
 bool FxFTTT_board::game_is_over(Player<char>* player) {

@@ -10,4 +10,6 @@ add_executable(
         NUMTTT_classes.cpp
         XO_Classes.cpp
         FourInRow_Classes.cpp
+        Misere_Classes.cpp
+        FiveXFiveTTT_Classes.cpp
 )

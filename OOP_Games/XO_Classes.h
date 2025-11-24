@@ -75,7 +75,7 @@ public:
  * @brief User Interface class for the X-O (Tic-Tac-Toe) game.
  *
  * Inherits from the generic `UI<char>` base class and provides
- * X-O�specific functionality for player setup and move input.
+ * X-Oâ€“specific functionality for player setup and move input.
  *
  * @see UI
  */

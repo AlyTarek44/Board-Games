@@ -6,6 +6,8 @@
 #include "XO_Classes.h"
 #include "FourInRow_Classes.h"
 #include "Misere_Classes.h"
+#include "FiveXFiveTTT_Classes.h"
+
 
 using namespace std;
 
@@ -72,6 +74,20 @@ void run_FourInRow() {
     delete[] players;
 }
 
+void run_FiveXFiveTTT() {
+    srand(static_cast<unsigned int>(time(0)));
+    Board<char>*FxFBoard = new FxFTTT_board;
+    UI<char>*game_ui = new FxFTTT_ui;
+    Player<char> **players = game_ui->setup_players();
+    GameManager<char> game_f(FxFBoard, players, game_ui);
+    game_f.run();
+    delete FxFBoard;
+    delete game_ui;
+    for (int i = 0; i < 2; ++i) {
+        delete players[i];
+    }
+    delete[] players;
+}
 void run_Misere() {
     srand(static_cast<unsigned int>(time(0)));
 
@@ -102,7 +118,8 @@ int main() {
         cout << "1. Numerical Tic-Tac-Toe\n";
         cout << "2. 3*3 Tic-Tac-Toe\n";
         cout << "3. Four-in-a-Row\n";
-        cout << "4. Misere Tic-Tac-Toe(3x3)\n";
+        cout << "4. 5*5 Tic-Tac-Toe\n";
+        cout << "5. Misere Tic-Tac-Toe(3x3)\n";
         cout << "0. Exit\n";
         cout << "Enter your choice: ";
 
@@ -120,12 +137,14 @@ int main() {
 
             case 3:run_FourInRow(); break;
 
-            case 4:run_Misere(); break;
+            case 4:run_FiveXFiveTTT();break;
+
+            case 5:run_Misere(); break;
 
             case 0:cout << "Goodbye!\n";return 0;
 
             default:
-                cout << "Invalid choice. Please select [1,2,3,4,0].\n";
+                cout << "Invalid choice. Please select [1,2,3,4,5,0].\n";
         }
     }
 }

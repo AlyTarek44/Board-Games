@@ -176,19 +176,6 @@ void run_infinite() {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 int main() {
     int choice;
 
@@ -235,7 +222,7 @@ int main() {
             case 0:cout << "Goodbye!\n";return 0;
 
             default:
-                cout << "Invalid choice. Please select [1,2,3,4,5,0].\n";
+                cout << "Invalid choice. Please select [1,2,3,4,5,6,7,8,0].\n";
         }
     }
 }

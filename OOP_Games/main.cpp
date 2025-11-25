@@ -8,6 +8,7 @@
 #include "Misere_Classes.h"
 #include "FiveXFiveTTT_Classes.h"
 #include "SUS_Classes.h"
+#include "Pyramid_Classes.h"
 
 
 using namespace std;
@@ -77,17 +78,10 @@ void run_FourInRow() {
 
 void run_FiveXFiveTTT() {
     srand(static_cast<unsigned int>(time(0)));
-    FxFTTT_board* FxFBoard = new FxFTTT_board;
+    Board<char>*FxFBoard = new FxFTTT_board;
     UI<char>*game_ui = new FxFTTT_ui;
     Player<char> **players = game_ui->setup_players();
-    if (players[0]->get_type() == PlayerType::COMPUTER) {
-        FxFBoard->set_ai_symbols(players[0]->get_symbol(), players[1]->get_symbol());
-    }
-    else if (players[1]->get_type() == PlayerType::COMPUTER) {
-        FxFBoard->set_ai_symbols(players[1]->get_symbol(), players[0]->get_symbol());
-    }
     GameManager<char> game_f(FxFBoard, players, game_ui);
-
     game_f.run();
     delete FxFBoard;
     delete game_ui;
@@ -134,6 +128,26 @@ void run_SUS() {
     }
     delete[] players;
 }
+void run_Pyramid() {
+    srand(static_cast<unsigned int>(time(0)));
+
+    Pyramid_Board *board = new Pyramid_Board();
+    Pyramid_UI *ui = new Pyramid_UI(board);
+
+    Player<char> **players = ui->setup_players();
+
+    GameManager<char> gm(board, players, ui);
+
+    gm.run();
+
+    delete board;
+    delete ui;
+    for (int i = 0; i < 2; ++i) {
+        delete players[i];
+    }
+    delete[] players;
+}
+
 int main() {
     int choice;
 
@@ -148,6 +162,7 @@ int main() {
         cout << "4. 5*5 Tic-Tac-Toe\n";
         cout << "5. Misere Tic-Tac-Toe(3x3)\n";
         cout << "6. SUS\n";
+        cout << "7. Pyramid Tic-Tac-Toe\n";
         cout << "0. Exit\n";
         cout << "Enter your choice: ";
 
@@ -170,6 +185,8 @@ int main() {
             case 5:run_Misere(); break;
 
             case 6:run_SUS(); break;
+
+            case 7: run_Pyramid(); break;
 
             case 0:cout << "Goodbye!\n";return 0;
 

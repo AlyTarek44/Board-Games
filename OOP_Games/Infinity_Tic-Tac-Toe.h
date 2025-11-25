@@ -6,6 +6,8 @@
 #define INFINITY_TIC_TAC_TOE_H
 #include "BoardGame_Classes.h"
 #include "XO_Classes.h"
+#include "deque"
+
 
 using namespace std;
 

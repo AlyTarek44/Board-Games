@@ -7,6 +7,7 @@
 #include "FourInRow_Classes.h"
 #include "Misere_Classes.h"
 #include "FiveXFiveTTT_Classes.h"
+#include "Infinity_Tic-Tac-Toe.h"
 #include "SUS_Classes.h"
 #include "Pyramid_Classes.h"
 
@@ -147,6 +148,46 @@ void run_Pyramid() {
     }
     delete[] players;
 }
+void run_infinite() {
+    srand(static_cast<unsigned int>(time(0)));
+
+    UI<char> *game_ui = new XO_UI();
+
+    Board<char> *xo_board = new inf_xo_Board;
+
+    Player<char> **players = game_ui->setup_players();
+
+    GameManager<char> x_o_game(xo_board, players, game_ui);
+
+    x_o_game.run();
+
+    delete xo_board;
+    delete game_ui;
+
+    for (int i = 0; i < 2; ++i) {
+        delete players[i];
+    }
+    delete[] players;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 int main() {
     int choice;
@@ -163,6 +204,7 @@ int main() {
         cout << "5. Misere Tic-Tac-Toe(3x3)\n";
         cout << "6. SUS\n";
         cout << "7. Pyramid Tic-Tac-Toe\n";
+        cout << "8. Infinite Tic-Tac-Toe\n";
         cout << "0. Exit\n";
         cout << "Enter your choice: ";
 
@@ -187,6 +229,8 @@ int main() {
             case 6:run_SUS(); break;
 
             case 7: run_Pyramid(); break;
+
+            case 8:run_infinite(); break;
 
             case 0:cout << "Goodbye!\n";return 0;
 

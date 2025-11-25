@@ -14,4 +14,6 @@ add_executable(
         FiveXFiveTTT_Classes.cpp
         SUS_Classes.cpp
         Pyramid_Classes.cpp
+        Infinity_Tic-Tac-Toe.cpp
+        Infinity_Tic-Tac-Toe.h
 )

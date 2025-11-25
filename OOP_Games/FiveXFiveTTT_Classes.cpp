@@ -1,11 +1,11 @@
 //
 // Created by Ali Tarek on 23/11/2025.
 ////--------------------------------------- IMPLEMENTATION
-
+#include "FiveXFiveTTT_Classes.h"
 #include <iostream>
 #include <iomanip>
 #include <cctype>  // for toupper()
-#include "FiveXFiveTTT_Classes.h"
+
 
 
 FxFTTT_board :: FxFTTT_board() : Board(5, 5) {
@@ -137,28 +137,178 @@ FxFTTT_ui ::FxFTTT_ui() : UI<char>("Welcome to 5x5 tic tac toe by Ali",3) {}
   return new Player<char>(name, symbol, type);
 }
 Move<char>* FxFTTT_ui::get_move(Player<char>* player) {
-  int x, y;
+    int x, y;
 
-  if (player->get_type() == PlayerType::HUMAN) {
-    string s;
-    cout << "\nPlease enter your move x and y (0 to 4): ";
-    cin >> s;
+    if (player->get_type() == PlayerType::HUMAN) {
 
-    while (s.size() != 2 || !isdigit(s[0]) || !isdigit(s[1])) {
-      cout << "Invalid input! Enter exactly two digits (ex: 02, 40): ";
-      cin >> s;
+        string s;
+        cout << "\nPlease enter your move x and y (0 to 4): ";
+        cin >> s;
+
+        while (s.size() != 2 || !isdigit(s[0]) || !isdigit(s[1])) {
+            cout << "Invalid input! Enter exactly two digits (ex: 02, 40): ";
+            cin >> s;
+        }
+
+        x = s[0] - '0';
+        y = s[1] - '0';
+    }
+    else {
+
+        FxFTTT_board* board = dynamic_cast<FxFTTT_board*>(player->get_board_ptr());
+        if (!board) {
+
+            x = rand() % player->get_board_ptr()->get_rows();
+            y = rand() % player->get_board_ptr()->get_columns();
+        }
+        else {
+            std::pair<int,int> best_move = board->find_best_move();
+            x = best_move.first;
+            y = best_move.second;
+            cout << "\nAI chooses move: " << x << y << endl;
+        }
     }
 
-    x = s[0] - '0';
-    y = s[1] - '0';
-  }
-  else {
-    x = rand() % player->get_board_ptr()->get_rows();
-    y = rand() % player->get_board_ptr()->get_columns();
-  }
-
-  return new Move<char>(x, y, player->get_symbol());
+    return new Move<char>(x, y, player->get_symbol());
 }
 bool FxFTTT_board::game_is_over(Player<char>* player) {
-  return (n_moves == 24);
+    if (n_moves == 24)
+        return true;
+    return false;
+}
+
+
+//Ai functions
+std::vector<std::pair<int, int> > FxFTTT_board::get_available_moves() {
+     vector<std::pair<int, int> > moves;
+  for (int i=0 ; i<rows ;i++) {
+         for (int j=0 ; j<columns ; j++) {
+           if (board[i][j] == blank_symbol) {
+                moves.push_back(std::make_pair(i,j));
+           }
+         }
+       }
+  return moves;
+}
+
+void FxFTTT_board::simulate_move( int row, int col, char symbol) {
+  board[row][col] = symbol;
+  n_moves++;  // ADDED: Track moves during simulation
+}
+void FxFTTT_board::undo_move(int row, int col) {
+  board[row][col] = blank_symbol;
+  n_moves--;  // ADDED: Untrack moves during simulation
+}
+void FxFTTT_board::set_ai_symbols(char ai, char opp) {
+    ai_symbol = ai;
+    opp_symbol = opp;
+}
+int FxFTTT_board::evaluate_board() {
+    int ai_score = 0, opp_score = 0;
+
+    auto all_equal = [&](char a, char b, char c) {
+        return a == b && b == c && a != blank_symbol;
+    };
+
+    // Check rows
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j + 2 < columns; j++) {
+            char c = board[i][j];
+            if (all_equal(c, board[i][j+1], board[i][j+2])) {
+                if (c == ai_symbol) ai_score++;
+                else if (c == opp_symbol) opp_score++;
+            }
+        }
+    }
+
+    // Check columns
+    for (int j = 0; j < columns; j++) {
+        for (int i = 0; i + 2 < rows; i++) {
+            char c = board[i][j];
+            if (all_equal(c, board[i+1][j], board[i+2][j])) {
+                if (c == ai_symbol) ai_score++;
+                else if (c == opp_symbol) opp_score++;
+            }
+        }
+    }
+
+    // Check main diagonals
+    for (int i = 0; i + 2 < rows; i++) {
+        for (int j = 0; j + 2 < columns; j++) {
+            char c = board[i][j];
+            if (all_equal(c, board[i+1][j+1], board[i+2][j+2])) {
+                if (c == ai_symbol) ai_score++;
+                else if (c == opp_symbol) opp_score++;
+            }
+        }
+    }
+
+    // Check anti-diagonals
+    for (int i = 0; i + 2 < rows; i++) {
+        for (int j = 2; j < columns; j++) {
+            char c = board[i][j];
+            if (all_equal(c, board[i+1][j-1], board[i+2][j-2])) {
+                if (c == ai_symbol) ai_score++;
+                else if (c == opp_symbol) opp_score++;
+            }
+        }
+    }
+
+    return ai_score - opp_score;
+}
+
+// --- Minimax function with depth limit 3 ---
+int FxFTTT_board::minimax(int depth, bool is_max, int alpha, int beta) {
+
+    auto moves = get_available_moves();
+
+    // Stop if no moves left or depth limit reached
+    if (depth == 0 || moves.empty()) {
+        return evaluate_board();
+    }
+
+    if (is_max) {
+        int best = -100000;
+        for (auto& move : moves) {
+            simulate_move(move.first, move.second, ai_symbol);
+            int val = minimax(depth - 1, false, alpha, beta);
+            undo_move(move.first, move.second);
+            best = std::max(best, val);
+            alpha = std::max(alpha, best);
+            if (beta <= alpha) break;
+        }
+        return best;
+    } else {
+        int best = 100000;
+        for (auto& move : moves) {
+            simulate_move(move.first, move.second, opp_symbol);
+            int val = minimax(depth - 1, true, alpha, beta);
+            undo_move(move.first, move.second);
+            best = std::min(best, val);
+            beta = std::min(beta, best);
+            if (beta <= alpha) break;
+        }
+        return best;
+    }
+}
+
+
+std::pair<int,int> FxFTTT_board::find_best_move() {
+    int best_val = -100000;
+    std::pair<int,int> best_move = {-1,-1};
+    int alpha = -100000;
+    int beta = 100000;
+    for (auto& move : get_available_moves()) {
+        simulate_move(move.first, move.second, ai_symbol);
+        int move_val = minimax(4, false, alpha, beta);
+        undo_move(move.first, move.second);
+
+        if (move_val > best_val) {
+            best_val = move_val;
+            best_move = move;
+            alpha = std::max(alpha, best_val);
+        }
+    }
+
+    return best_move;
 }

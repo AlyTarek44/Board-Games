@@ -77,10 +77,17 @@ void run_FourInRow() {
 
 void run_FiveXFiveTTT() {
     srand(static_cast<unsigned int>(time(0)));
-    Board<char>*FxFBoard = new FxFTTT_board;
+    FxFTTT_board* FxFBoard = new FxFTTT_board;
     UI<char>*game_ui = new FxFTTT_ui;
     Player<char> **players = game_ui->setup_players();
+    if (players[0]->get_type() == PlayerType::COMPUTER) {
+        FxFBoard->set_ai_symbols(players[0]->get_symbol(), players[1]->get_symbol());
+    }
+    else if (players[1]->get_type() == PlayerType::COMPUTER) {
+        FxFBoard->set_ai_symbols(players[1]->get_symbol(), players[0]->get_symbol());
+    }
     GameManager<char> game_f(FxFBoard, players, game_ui);
+
     game_f.run();
     delete FxFBoard;
     delete game_ui;

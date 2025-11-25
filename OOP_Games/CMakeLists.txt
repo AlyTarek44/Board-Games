@@ -12,6 +12,7 @@ add_executable(
         FourInRow_Classes.cpp
         Misere_Classes.cpp
         FiveXFiveTTT_Classes.cpp
+        FiveXFiveTTT_Classes.h
         SUS_Classes.h
         SUS_Classes.cpp
 )

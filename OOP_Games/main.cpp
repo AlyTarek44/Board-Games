@@ -7,6 +7,7 @@
 #include "FourInRow_Classes.h"
 #include "Misere_Classes.h"
 #include "FiveXFiveTTT_Classes.h"
+#include "SUS_Classes.h"
 
 
 using namespace std;
@@ -106,7 +107,26 @@ void run_Misere() {
     delete players[1];
     delete[] players;
 }
+void run_SUS() {
+    srand(static_cast<unsigned int>(time(0)));
 
+    SUS_Board *sus_board = new SUS_Board();
+
+    SUS_UI *sus_ui = new SUS_UI(static_cast<SUS_Board *>(sus_board));
+
+    Player<char> **players = sus_ui->setup_players();
+
+    GameManager<char> sus_game(sus_board, players, sus_ui);
+
+    sus_game.run();
+
+    delete sus_board;
+    delete sus_ui;
+    for (int i = 0; i < 2; ++i) {
+        delete players[i];
+    }
+    delete[] players;
+}
 int main() {
     int choice;
 
@@ -120,6 +140,7 @@ int main() {
         cout << "3. Four-in-a-Row\n";
         cout << "4. 5*5 Tic-Tac-Toe\n";
         cout << "5. Misere Tic-Tac-Toe(3x3)\n";
+        cout << "6. SUS\n";
         cout << "0. Exit\n";
         cout << "Enter your choice: ";
 
@@ -140,6 +161,8 @@ int main() {
             case 4:run_FiveXFiveTTT();break;
 
             case 5:run_Misere(); break;
+
+            case 6:run_SUS(); break;
 
             case 0:cout << "Goodbye!\n";return 0;
 

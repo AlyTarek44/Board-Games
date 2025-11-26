@@ -193,11 +193,11 @@ std::vector<std::pair<int, int> > FxFTTT_board::get_available_moves() {
 
 void FxFTTT_board::simulate_move( int row, int col, char symbol) {
   board[row][col] = symbol;
-  n_moves++;  // ADDED: Track moves during simulation
+  n_moves++;
 }
 void FxFTTT_board::undo_move(int row, int col) {
   board[row][col] = blank_symbol;
-  n_moves--;  // ADDED: Untrack moves during simulation
+  n_moves--;
 }
 void FxFTTT_board::set_ai_symbols(char ai, char opp) {
     ai_symbol = ai;

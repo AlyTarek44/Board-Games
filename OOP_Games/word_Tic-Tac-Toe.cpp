@@ -190,14 +190,14 @@ Move<char>* word_xo_board::find_best_move() {
         for (int j = 0; j < columns; ++j) {
             if (board[i][j] == blank_symbol) {
                 for (char letter = 'A'; letter <= 'Z'; ++letter) {
-                    // 1. Check AI can win now
+
                     simulate_move(i, j, letter);
                     if (is_valid_word()) {
                         undo_move(i, j, letter);
-                        return new Move<char>(i, j, letter); // Instant win
+                        return new Move<char>(i, j, letter);
                     }
 
-                    // 2. Check if human can win after this move
+
                     bool human_can_win = false;
                     for (int hi = 0; hi < rows; ++hi) {
                         for (int hj = 0; hj < columns; ++hj) {
@@ -221,10 +221,10 @@ Move<char>* word_xo_board::find_best_move() {
         }
     }
 
-    // Pick first safe move
+
     if (!safe_moves.empty()) return safe_moves[0];
 
-    // Otherwise, pick first available move
+
     for (int i = 0; i < rows; ++i)
         for (int j = 0; j < columns; ++j)
             if (board[i][j] == blank_symbol)
@@ -248,7 +248,22 @@ Player<char>* word_xo_ui::create_player(string& name, char symbol, PlayerType ty
 
 
 Move<char>* word_xo_ui::get_move(Player<char>* player) {
-    if (player->get_type() == PlayerType::HUMAN) {
+    if (player->get_type() != PlayerType::HUMAN) {
+
+        int x, y;
+        char letter;
+        Move<char>* best_move =board->find_best_move();
+        x = best_move->get_x();
+        y = best_move->get_y();
+        letter = best_move->get_symbol();
+        delete best_move;
+
+        cout << player->get_name() << " (COMPUTER) chooses letter " << letter
+                << " at (" << x << "," << y << ")\n";
+
+        return new Move<char>(x, y, letter);
+    }
+
         int x, y;
         char letter;
 
@@ -263,21 +278,7 @@ Move<char>* word_xo_ui::get_move(Player<char>* player) {
         cin >> y;
 
         return new Move<char>(x, y, letter);
-    } else {
-        // simple AI: random empty cell and random letter A-Z
-        int x, y;
-        char letter;
-        Move<char>* best_move =board->find_best_move();
-        x = best_move->get_x();
-        y = best_move->get_y();
-        letter = best_move->get_symbol();
-        delete best_move;
 
-        cout << player->get_name() << " (COMPUTER) chooses letter " << letter
-             << " at (" << x << "," << y << ")\n";
-
-        return new Move<char>(x, y, letter);
-    }
 }
 
 

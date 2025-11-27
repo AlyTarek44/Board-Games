@@ -206,9 +206,9 @@ int main() {
         cout << "4. 5*5 Tic-Tac-Toe\n";
         cout << "5. word Tic-Tac-Toe\n";
         cout << "6. Misere Tic-Tac-Toe(3x3)\n";
-        cout << "6. SUS\n";
-        cout << "7. Pyramid Tic-Tac-Toe\n";
-        cout << "8. Infinite Tic-Tac-Toe\n";
+        cout << "7. SUS\n";
+        cout << "8. Pyramid Tic-Tac-Toe\n";
+        cout << "9. Infinite Tic-Tac-Toe\n";
         cout << "0. Exit\n";
         cout << "Enter your choice: ";
 
@@ -241,7 +241,7 @@ int main() {
             case 0:cout << "Goodbye!\n";return 0;
 
             default:
-                cout << "Invalid choice. Please select [1,2,3,4,5,6,7,8,0].\n";
+                cout << "Invalid choice. Please select [1,2,3,4,5,6,7,8,9,0].\n";
         }
     }
 }

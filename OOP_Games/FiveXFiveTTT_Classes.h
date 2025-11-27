@@ -42,8 +42,8 @@ class FxFTTT_ui : public UI<char> {
   public :
     FxFTTT_ui();
 
-    Player<char>* create_player(string& name, char symbol, PlayerType type);
-    virtual Move<char>* get_move(Player<char>* player);
+    Player<char>* create_player(string& name, char symbol, PlayerType type)override;
+     Move<char>* get_move(Player<char>* player)override;
 };
 
 

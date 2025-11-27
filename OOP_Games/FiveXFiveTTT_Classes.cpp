@@ -15,6 +15,8 @@ FxFTTT_board :: FxFTTT_board() : Board(5, 5) {
     }
   }
 }
+
+
 bool FxFTTT_board::update_board(Move<char>* move) {
   int x = move->get_x();
   int y = move->get_y();
@@ -90,6 +92,8 @@ if (sum_x==sum_o) {return 0;}
 if (sum_x>sum_o) {return 1;}
 if (sum_x<sum_o) {return -1;}
 }
+
+
 bool FxFTTT_board::is_draw(Player<char>* Player) {
   if (n_moves < 24)
     return false;
@@ -98,6 +102,8 @@ bool FxFTTT_board::is_draw(Player<char>* Player) {
   int result = check_all_lines();
   return (result == 0);
 }
+
+
 bool FxFTTT_board::is_win(Player<char>* player) {
   if (n_moves < 24)
     return false;
@@ -112,6 +118,8 @@ bool FxFTTT_board::is_win(Player<char>* player) {
 
   return false;
 }
+
+
 
 bool FxFTTT_board :: is_lose(Player<char>*player) {
   if (n_moves < 24){return false;}
@@ -128,14 +136,18 @@ bool FxFTTT_board :: is_lose(Player<char>*player) {
   return false;
 }
 
+
 FxFTTT_ui ::FxFTTT_ui() : UI<char>("Welcome to 5x5 tic tac toe by Ali",3) {}
 
-  Player<char>* FxFTTT_ui::create_player(string& name, char symbol, PlayerType type ) {
+
+Player<char>* FxFTTT_ui::create_player(string& name, char symbol, PlayerType type ) {
   cout << "Creating " << (type == PlayerType::HUMAN ? "human" : "computer")
        << " player: " << name << " (" << symbol << ")\n";
 
   return new Player<char>(name, symbol, type);
 }
+
+
 Move<char>* FxFTTT_ui::get_move(Player<char>* player) {
     int x, y;
 
@@ -171,6 +183,8 @@ Move<char>* FxFTTT_ui::get_move(Player<char>* player) {
 
     return new Move<char>(x, y, player->get_symbol());
 }
+
+
 bool FxFTTT_board::game_is_over(Player<char>* player) {
     if (n_moves == 24)
         return true;
@@ -179,6 +193,7 @@ bool FxFTTT_board::game_is_over(Player<char>* player) {
 
 
 //Ai functions
+
 std::vector<std::pair<int, int> > FxFTTT_board::get_available_moves() {
      vector<std::pair<int, int> > moves;
   for (int i=0 ; i<rows ;i++) {
@@ -191,24 +206,43 @@ std::vector<std::pair<int, int> > FxFTTT_board::get_available_moves() {
   return moves;
 }
 
+
+
 void FxFTTT_board::simulate_move( int row, int col, char symbol) {
   board[row][col] = symbol;
   n_moves++;
 }
+
+
 void FxFTTT_board::undo_move(int row, int col) {
   board[row][col] = blank_symbol;
   n_moves--;
 }
+
+
+
 void FxFTTT_board::set_ai_symbols(char ai, char opp) {
     ai_symbol = ai;
     opp_symbol = opp;
 }
+
+
+
+
+//heuristic function
+
 int FxFTTT_board::evaluate_board() {
+
+
     int ai_score = 0, opp_score = 0;
+
+
 
     auto all_equal = [&](char a, char b, char c) {
         return a == b && b == c && a != blank_symbol;
     };
+
+
 
     // Check rows
     for (int i = 0; i < rows; i++) {
@@ -221,6 +255,8 @@ int FxFTTT_board::evaluate_board() {
         }
     }
 
+
+
     // Check columns
     for (int j = 0; j < columns; j++) {
         for (int i = 0; i + 2 < rows; i++) {
@@ -232,6 +268,8 @@ int FxFTTT_board::evaluate_board() {
         }
     }
 
+
+
     // Check main diagonals
     for (int i = 0; i + 2 < rows; i++) {
         for (int j = 0; j + 2 < columns; j++) {
@@ -242,6 +280,8 @@ int FxFTTT_board::evaluate_board() {
             }
         }
     }
+
+
 
     // Check anti-diagonals
     for (int i = 0; i + 2 < rows; i++) {
@@ -257,7 +297,13 @@ int FxFTTT_board::evaluate_board() {
     return ai_score - opp_score;
 }
 
+
+
+
+
 // --- Minimax function with depth limit 3 ---
+
+
 int FxFTTT_board::minimax(int depth, bool is_max, int alpha, int beta) {
 
     auto moves = get_available_moves();

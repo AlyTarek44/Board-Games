@@ -10,6 +10,7 @@
 #include "Infinity_Tic-Tac-Toe.h"
 #include "SUS_Classes.h"
 #include "Pyramid_Classes.h"
+#include "word_Tic-Tac-Toe.h"
 
 
 using namespace std;
@@ -90,6 +91,21 @@ void run_FiveXFiveTTT() {
         delete players[i];
     }
     delete[] players;
+}
+void run_word_ttt() {
+    srand(static_cast<unsigned int>(time(0)));
+    word_xo_board *word_board = new word_xo_board();
+    UI<char>* game_ui = new word_xo_ui(word_board);
+    Player<char> **players = game_ui->setup_players();
+    GameManager<char> game_f(word_board, players, game_ui);
+    game_f.run();
+    delete word_board;
+    delete game_ui;
+    for (int i = 0; i < 2; ++i) {
+        delete players[i];
+    }
+    delete[] players;
+
 }
 void run_Misere() {
     srand(static_cast<unsigned int>(time(0)));
@@ -188,7 +204,8 @@ int main() {
         cout << "2. 3*3 Tic-Tac-Toe\n";
         cout << "3. Four-in-a-Row\n";
         cout << "4. 5*5 Tic-Tac-Toe\n";
-        cout << "5. Misere Tic-Tac-Toe(3x3)\n";
+        cout << "5. word Tic-Tac-Toe\n";
+        cout << "6. Misere Tic-Tac-Toe(3x3)\n";
         cout << "6. SUS\n";
         cout << "7. Pyramid Tic-Tac-Toe\n";
         cout << "8. Infinite Tic-Tac-Toe\n";
@@ -211,13 +228,15 @@ int main() {
 
             case 4:run_FiveXFiveTTT();break;
 
-            case 5:run_Misere(); break;
+            case 5:run_word_ttt();break;
 
-            case 6:run_SUS(); break;
+            case 6:run_Misere(); break;
 
-            case 7: run_Pyramid(); break;
+            case 7:run_SUS(); break;
 
-            case 8:run_infinite(); break;
+            case 8: run_Pyramid(); break;
+
+            case 9:run_infinite(); break;
 
             case 0:cout << "Goodbye!\n";return 0;
 

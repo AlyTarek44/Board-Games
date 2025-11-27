@@ -16,4 +16,6 @@ add_executable(
         Pyramid_Classes.cpp
         Infinity_Tic-Tac-Toe.cpp
         Infinity_Tic-Tac-Toe.h
+        word_Tic-Tac-Toe.cpp
+        word_Tic-Tac-Toe.h
 )

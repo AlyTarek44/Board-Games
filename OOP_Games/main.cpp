@@ -11,6 +11,7 @@
 #include "SUS_Classes.h"
 #include "Pyramid_Classes.h"
 #include "word_Tic-Tac-Toe.h"
+#include "DiamondTTT_Classes.h"
 
 
 using namespace std;
@@ -186,6 +187,24 @@ void run_infinite() {
     delete[] players;
 }
 
+void run_Diamond() {
+    srand(static_cast<unsigned int>(time(0)));
+
+    Diamond_Board *board = new Diamond_Board();
+    Diamond_UI *ui = new Diamond_UI(board);
+
+    Player<char> **players = ui->setup_players();
+
+    GameManager<char> gm(board, players, ui);
+
+    gm.run();
+
+    delete board;
+    delete ui;
+    delete players[0];
+    delete players[1];
+    delete[] players;
+}
 
 
 
@@ -209,6 +228,7 @@ int main() {
         cout << "7. SUS\n";
         cout << "8. Pyramid Tic-Tac-Toe\n";
         cout << "9. Infinite Tic-Tac-Toe\n";
+        cout << "10. Diamond Tic-Tac-Toe\n";
         cout << "0. Exit\n";
         cout << "Enter your choice: ";
 
@@ -238,10 +258,12 @@ int main() {
 
             case 9:run_infinite(); break;
 
+            case 10:run_Diamond(); break;
+
             case 0:cout << "Goodbye!\n";return 0;
 
             default:
-                cout << "Invalid choice. Please select [1,2,3,4,5,6,7,8,9,0].\n";
+                cout << "Invalid choice. Please select [1,2,3,4,5,6,7,8,9,10,0].\n";
         }
     }
 }

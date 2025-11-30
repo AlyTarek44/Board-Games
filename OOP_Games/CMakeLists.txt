@@ -18,4 +18,5 @@ add_executable(
         Infinity_Tic-Tac-Toe.h
         word_Tic-Tac-Toe.cpp
         word_Tic-Tac-Toe.h
+        DiamondTTT_Classes.cpp
 )

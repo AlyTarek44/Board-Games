@@ -15,13 +15,14 @@ class inf_xo_Board : public X_O_Board {
 private:
     char blank_symbol = '.';
     deque<pair<int,int>> moves;
-    int counter = 0;
+     int counter = 0;
 public:
 
         inf_xo_Board();
 
     bool update_board(Move<char>* move)override;
-
+    bool is_draw(Player<char> *) override;
+    bool check_available_moves();
 };
 
 #endif //INFINITY_TIC_TAC_TOE_H

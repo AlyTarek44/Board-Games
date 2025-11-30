@@ -112,6 +112,13 @@ bool SUS_Board::is_win(Player<char>* player) {
 }
 
 bool SUS_Board::is_lose(Player<char>* player) {
+    if (n_moves == 9) {
+        if (player->get_symbol() == player1_letter) {
+            return player1_score < player2_score;
+        } else {
+            return player2_score < player1_score;
+        }
+    }
     return false;
 }
 

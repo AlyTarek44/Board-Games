@@ -13,6 +13,7 @@
 #include "word_Tic-Tac-Toe.h"
 #include "DiamondTTT_Classes.h"
 #include "ultimateTTT_Classes.h"
+#include "Memory_Classes.h"
 
 
 using namespace std;
@@ -216,6 +217,23 @@ void run_Ultimate() {
     delete board; delete ui; delete players[0]; delete players[1]; delete[] players;
 }
 
+void run_Memory() {
+    srand(static_cast<unsigned int>(time(0)));
+
+    Memory_Board *memory_board = new Memory_Board();
+    Memory_UI *memory_ui = new Memory_UI(memory_board);
+    Player<char> **players = memory_ui->setup_players();
+
+    // Use the custom run function
+    memory_ui->run_game(players);
+
+    delete memory_board;
+    delete memory_ui;
+    for (int i = 0; i < 2; ++i) {
+        delete players[i];
+    }
+    delete[] players;
+}
 
 
 
@@ -240,6 +258,7 @@ int main() {
         cout << "9. Infinite Tic-Tac-Toe\n";
         cout << "10. Diamond Tic-Tac-Toe\n";
         cout << "11. Ultimate Tic-Tac-Toe\n";
+        cout << "12. Memory Tic-Tac-Toe\n";
         cout << "0. Exit\n";
         cout << "Enter your choice: ";
 
@@ -273,10 +292,12 @@ int main() {
 
             case 11:run_Ultimate(); break;
 
+            case 12:run_Memory(); break;
+
             case 0:cout << "Goodbye!\n";return 0;
 
             default:
-                cout << "Invalid choice. Please select [1,2,3,4,5,6,7,8,9,10,11,0].\n";
+                cout << "Invalid choice. Please select [1,2,3,4,5,6,7,8,9,10,11,12,0].\n";
         }
     }
 }

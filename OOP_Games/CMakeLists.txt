@@ -19,4 +19,6 @@ add_executable(
         word_Tic-Tac-Toe.cpp
         word_Tic-Tac-Toe.h
         DiamondTTT_Classes.cpp
+        Memory_Classes.cpp
+        ultimateTTT_Classes.cpp
 )

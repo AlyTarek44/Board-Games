@@ -26,7 +26,6 @@ public:
     bool make_temp_move(int r, int c, char symbol);
     void undo_temp_move(int r, int c);
 
-    // Check if placing symbol at (r,c) creates the simultaneous 3+4 line win
     bool placement_creates_win(int r, int c, char symbol) const;
 
     static const char blank_symbol;
@@ -68,6 +67,8 @@ public:
     virtual Player<char>* create_player(string& name, char symbol, PlayerType type) override;
 
     virtual Move<char>* get_move(Player<char>* player) override;
+
+    virtual void display_board_matrix(const vector<vector<char>>& matrix) const override;
 };
 
 #endif

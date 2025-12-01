@@ -12,7 +12,6 @@ const char Diamond_Board::blank_symbol = ' ';
 // Diamond_Board implementation
 
 Diamond_Board::Diamond_Board() : Board<char>(5, 5) {
-    // initialize all cells to blank
     for (int i = 0; i < rows; ++i)
         for (int j = 0; j < columns; ++j)
             board[i][j] = blank_symbol;
@@ -97,7 +96,6 @@ bool Diamond_Board::exists_contiguous_line_including(int r, int c, int len, int 
     return false;
 }
 
-// After placing symbol at (r,c), check whether that move produced simultaneous 3 and 4 in different directions.
 bool Diamond_Board::placement_creates_win(int r, int c, char symbol) const {
     bool has3[4] = {false, false, false, false};
     bool has4[4] = {false, false, false, false};
@@ -107,7 +105,6 @@ bool Diamond_Board::placement_creates_win(int r, int c, char symbol) const {
         has4[dir] = exists_contiguous_line_including(r, c, 4, dir, symbol);
     }
 
-    // Need one dir3 and one dir4 with dir3 != dir4
     for (int d3 = 0; d3 < 4; ++d3) if (has3[d3]) {
         for (int d4 = 0; d4 < 4; ++d4) if (has4[d4] && d4 != d3) {
             return true;
@@ -128,14 +125,12 @@ bool Diamond_Board::is_win(Player<char>* player) {
     return false;
 }
 
-bool Diamond_Board::is_lose(Player<char>* /*player*/) {
+bool Diamond_Board::is_lose(Player<char>* player) {
     return false;
 }
 
-bool Diamond_Board::is_draw(Player<char>* /*player*/) {
-    // Draw if no empty valid cells and nobody has a valid win
+bool Diamond_Board::is_draw(Player<char>* player) {
     for (auto p : valid_positions) if (board[p.first][p.second] == blank_symbol) return false;
-    // check both symbols
     Player<char> tmpX("tmpX",'X',PlayerType::HUMAN);
     Player<char> tmpO("tmpO",'O',PlayerType::HUMAN);
     if (!is_win(&tmpX) && !is_win(&tmpO)) return true;
@@ -152,7 +147,6 @@ Diamond_AIPlayer::Diamond_AIPlayer(const string& name, char symbol)
     : Player<char>(name, symbol, PlayerType::AI) {}
 
 static string make_key_from_positions(const vector<pair<int,int>>& valid_positions, const vector<vector<char>>& board_mat) {
-    // serialize only valid positions in given order
     string key;
     key.reserve(valid_positions.size());
     for (auto &p : valid_positions) {
@@ -241,7 +235,6 @@ int Diamond_AIPlayer::backtrack_minimax(Diamond_Board* board, char current_symbo
     auto it = memo.find(key);
     if (it != memo.end()) return it->second;
 
-    // Terminal condition: if no empties => draw
     auto empties = board->get_empty_positions();
     if (empties.empty()) {
         memo[key] = 0;
@@ -261,7 +254,7 @@ int Diamond_AIPlayer::backtrack_minimax(Diamond_Board* board, char current_symbo
         bool b_win = board->placement_creates_win(b.first, b.second, current_symbol);
         board->undo_temp_move(b.first, b.second);
 
-        if (a_win != b_win) return a_win; // true first
+        if (a_win != b_win) return a_win;
         return false;
     });
 
@@ -271,7 +264,6 @@ int Diamond_AIPlayer::backtrack_minimax(Diamond_Board* board, char current_symbo
 
         int outcome;
         if (board->placement_creates_win(r, c, current_symbol)) {
-            // mover wins immediately
             outcome = (current_symbol == this->get_symbol()) ? 1 : -1;
             board->undo_temp_move(r, c);
 
@@ -306,13 +298,12 @@ int Diamond_AIPlayer::backtrack_minimax(Diamond_Board* board, char current_symbo
         if (alpha >= beta) break;
     }
 
-    if (best == -2 || best == 2) best = 0; // safety fallback
+    if (best == -2 || best == 2) best = 0;
     memo[key] = best;
     return best;
 }
 
 pair<int,int> Diamond_AIPlayer::tiebreak_choose(const vector<pair<int,int>>& choices) const {
-    // prefer center (2,2), then the middle-of-edges of diamond (1,2),(2,1),(2,3),(3,2),
     pair<int,int> center = {2,2};
     for (auto p : choices) if (p == center) return p;
 
@@ -330,6 +321,8 @@ Diamond_UI::Diamond_UI(Diamond_Board* board) : UI<char>("Welcome to Diamond Tic-
                                                 board_ptr(board) {
     srand((unsigned)time(nullptr));
 }
+
+void Diamond_UI::display_board_matrix(const vector<vector<char>>& matrix) const {}
 
 Player<char>** Diamond_UI::setup_players() {
     Player<char>** players = new Player<char>*[2];
@@ -369,10 +362,8 @@ void print_diamond_board(const Diamond_Board* board) {
         for (int c = 0; c < 5; c++) {
 
             if (!board->valid_cell(r,c)) {
-                // invalid diamond area — print space
                 cout << "    ";
             } else {
-                // valid diamond cell — print dot or symbol
                 char v = mat[r][c];
                 if (v == ' ')
                     cout << " .  ";

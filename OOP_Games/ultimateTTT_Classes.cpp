@@ -26,7 +26,7 @@ bool Ultimate_Board::update_board(Move<char>* move) {
     char sym     = move->get_symbol();
 
     if (main_idx < 0 || main_idx >= 9 || sub_idx < 0 || sub_idx >= 9) return false;
-    if (main_claims[main_idx] != ' ') return false; // sub-board already claimed
+    if (main_claims[main_idx] != ' ') return false;
     int gr, gc; unpack_indices(main_idx, sub_idx, gr, gc);
     if (board[gr][gc] != blank_symbol) return false;
     if (forced_main != -1 && forced_main != main_idx) return false;
@@ -37,8 +37,7 @@ bool Ultimate_Board::update_board(Move<char>* move) {
     char winner = check_subboard_winner(main_idx);
     if (winner != ' ' && main_claims[main_idx] == ' ') main_claims[main_idx] = winner;
     else if (subboard_full(main_idx) && main_claims[main_idx] == ' ') main_claims[main_idx] = 'D';
-
-    // set forced for next player - MODIFIED: REMOVED FORCING RULE
+    // REMOVED FORCING RULE: Next player can choose any unclaimed main board.
     forced_main = -1;
 
     return true;
@@ -146,7 +145,7 @@ bool Ultimate_Board::make_temp_move(int main_idx, int sub_idx, char symbol) {
     char winner = check_subboard_winner(main_idx);
     if (winner != ' ' && main_claims[main_idx] == ' ') main_claims[main_idx] = winner;
     else if (subboard_full(main_idx) && main_claims[main_idx] == ' ') main_claims[main_idx] = 'D';
-    // set forced for next player - MODIFIED: REMOVED FORCING RULE
+    // REMOVED FORCING RULE
     forced_main = -1;
     return true;
 }
@@ -189,9 +188,12 @@ Move<char>* Ultimate_AIPlayer::get_simple_move(Ultimate_Board* board) {
 
 //  Ultimate_UI
 
-Ultimate_UI::Ultimate_UI(Ultimate_Board* board) : UI<char>("Ultimate Tic-Tac-Toe (main-only display)", 1), board_ptr(board) {
+Ultimate_UI::Ultimate_UI(Ultimate_Board* board) : UI<char>("Ultimate Tic-Tac-Toe", 1), board_ptr(board) {
     srand((unsigned)time(nullptr));
 }
+
+
+void Ultimate_UI::display_board_matrix(const vector<vector<char>>& matrix) const {}
 
 Player<char>** Ultimate_UI::setup_players() {
     Player<char>** players = new Player<char>*[2];
@@ -231,6 +233,7 @@ void Ultimate_UI::print_full_board() const {
             cout << "       ======================================\n";
         }
 
+        // Row Index: R[Main Row] (S[Sub Row])
         if (r % 3 == 0) {
             cout << "R" << r/3 << " (" << r%3 << ")";
         } else {
@@ -243,16 +246,16 @@ void Ultimate_UI::print_full_board() const {
             cout << " " << sym << " ";
 
             if (c % 3 == 2 && c < N - 1) {
-                cout << "||";
+                cout << "||"; // Thick Main Column Separator
             }
             else if (c < N - 1) {
-                cout << "|";
+                cout << "|"; // Thin Sub Column Separator
             }
         }
         cout << "\n";
 
         if (r % 3 != 2 && r < N - 1) {
-            cout << "       --------------------------------------\n";
+            cout << "       --------------------------------------\n"; // Thin Sub Row Separator
         }
     }
     cout << "\n";
@@ -263,8 +266,8 @@ void Ultimate_UI::print_main_board_only() const {
     int forced = board_ptr->get_forced_main();
 
     cout << "\n   MAIN BOARD (sub-board claims)\n";
-    cout << "    0 | 1 | 2 \n"; // Column indices
-    cout << "  ----+---+----\n";
+    cout << "     0 | 1 | 2 \n"; // Column indices
+    cout << "   ----+---+----\n";
 
     for (int r = 0; r < 3; ++r) {
         cout << r << " |"; // Row index
@@ -276,14 +279,14 @@ void Ultimate_UI::print_main_board_only() const {
             else cell = string(1, ch);
 
             if (idx == forced) {
-                cout << "[" << cell << "]";
+                cout << "[" << cell << "]"; // Highlight forced board (if forced_main != -1)
             } else {
                 cout << " " << cell << " ";
             }
             if (c < 2) cout << "|";
         }
         cout << "\n";
-        if (r < 2) cout << "  ----+---+----\n";
+        if (r < 2) cout << "   ----+---+----\n";
     }
     cout << "\n";
 }
@@ -291,13 +294,13 @@ void Ultimate_UI::print_main_board_only() const {
 Move<char>* Ultimate_UI::get_move(Player<char>* player) {
     char sym = player->get_symbol();
 
+    // The custom boards are explicitly printed here for the player to see the current state.
     print_full_board();
-
     print_main_board_only();
 
     if (player->get_type() == PlayerType::HUMAN) {
         cout << "\n" << player->get_name() << "'s turn (" << sym << ")\n";
-        cout << "Enter: main_row main_col(2nd board) sub_row sub_col(1st board)  (each 0..2)\n";
+        cout << "Enter: main_row main_col sub_row sub_col  (each 0..2)\n";
         int mr, mc, sr, sc;
         while (true) {
             cout << "Move: ";

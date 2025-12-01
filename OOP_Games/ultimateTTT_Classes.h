@@ -71,6 +71,8 @@ public:
 
     virtual Move<char>* get_move(Player<char>* player) override;
 
+    virtual void display_board_matrix(const vector<vector<char>>& matrix) const override;
+
     void print_main_board_only() const;
     void print_full_board()const;
 };

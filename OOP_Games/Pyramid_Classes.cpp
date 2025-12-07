@@ -6,7 +6,7 @@
 #include "Pyramid_Classes.h"
 #include <iostream>
 #include <iomanip>
-#include <algorithm>   // for std::max, std::min
+#include <algorithm>
 #include <vector>
 
 using namespace std;

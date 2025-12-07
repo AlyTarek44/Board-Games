@@ -14,7 +14,6 @@ using namespace std;
 
 const char Ultimate_Board::blank_symbol = ' ';
 
-//  Ultimate_Board
 
 Ultimate_Board::Ultimate_Board() : Board<char>(9,9) {
     for (int r = 0; r < rows; ++r)
@@ -48,11 +47,7 @@ bool Ultimate_Board::update_board(Move<char>* move) {
     if (winner != ' ' && main_claims[main_idx] == ' ') main_claims[main_idx] = winner;
     else if (subboard_full(main_idx) && main_claims[main_idx] == ' ') main_claims[main_idx] = 'D';
 
-    // Update forced_main for next player.
-    // Rule: Next player must play in the sub-board corresponding to the cell index played in the current sub-board.
-    // However, if that target sub-board is full/claimed, they can play anywhere.
-    // Note: The code provided sets forced_main = -1 (removed forcing rule comment).
-    // If you want standard rules, uncomment logic here. Current logic allows free movement.
+
     forced_main = -1;
 
     return true;
@@ -152,7 +147,7 @@ bool Ultimate_Board::game_is_over(Player<char>* player) {
     return is_win(player) || is_draw(player);
 }
 
-// ... (Rest of AI and UI functions follow structure) ...
+// ... (Rest of AI and UI functions follow structure)
 
 Ultimate_AIPlayer::Ultimate_AIPlayer(const string& name, char symbol)
     : Player<char>(name, symbol, PlayerType::AI) {
@@ -187,7 +182,6 @@ void Ultimate_UI::display_board_matrix(const vector<vector<char>>& matrix) const
 Player<char>** Ultimate_UI::setup_players() {
     Player<char>** players = new Player<char>*[2];
     vector<string> type_options = { "Human", "Computer" };
-    // Setup logic ...
     cout << "\n--- Ultimate Tic-Tac-Toe Player Setup ---\n";
     string nameX = get_player_name("Player X");
     PlayerType typeX = get_player_type_choice("Player X", type_options);

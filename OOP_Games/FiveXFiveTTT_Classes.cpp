@@ -6,7 +6,7 @@
 #include "FiveXFiveTTT_Classes.h"
 #include <iostream>
 #include <iomanip>
-#include <cctype>  // for toupper()
+#include <cctype>
 
 FxFTTT_board :: FxFTTT_board() : Board(5, 5) {
   for (auto& row : board){
@@ -189,9 +189,7 @@ int FxFTTT_board::evaluate_board() {
     auto all_equal = [&](char a, char b, char c) {
         return a == b && b == c && a != blank_symbol;
     };
-    // (Logic for counting lines similar to check_all_lines but returns diff)
-    // ... [Code omitted for brevity, logic identical to check_all_lines]
-    // Note: In full implementation, this uses the same looping logic to score
+
 
     // Check rows
     for (int i = 0; i < rows; i++) {

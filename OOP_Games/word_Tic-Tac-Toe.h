@@ -104,4 +104,4 @@ public:
   Move<char> *get_move(Player<char> *) override;
 };
 
-#endif //WORD_TIC_TAC_TOE_H
+#endif

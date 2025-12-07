@@ -6,14 +6,13 @@
 #include <iostream>
 #include <iomanip>
 #include <cctype>
-#include <thread> // For sleep_for
-#include <chrono> // For milliseconds
+#include <thread>
+#include <chrono>
 #include <cstdlib>
 #include "Memory_Classes.h"
 
 using namespace std;
 
-// --- Memory_UI Helper ---
 void Memory_UI::clear_screen() {
 #if defined(_WIN32) || defined(_WIN64)
     system("cls");
@@ -22,7 +21,6 @@ void Memory_UI::clear_screen() {
 #endif
 }
 
-// --- Memory_Board Implementation ---
 
 Memory_Board::Memory_Board() : Board<char>(3, 3) {
     // Initialize the real underlying board
@@ -45,13 +43,12 @@ bool Memory_Board::update_board(Move<char>* move) {
 }
 
 vector<vector<char>> Memory_Board::get_board_matrix() const {
-    // Generate the "Fog of War" view
     vector<vector<char>> hidden_board = vector<vector<char>>(3, vector<char>(3, blank_symbol));
 
     for (int i = 0; i < 3; ++i) {
         for (int j = 0; j < 3; ++j) {
             if (real_board[i][j] != blank_symbol) {
-                hidden_board[i][j] = hidden_symbol; // Mask occupied cells
+                hidden_board[i][j] = hidden_symbol; // Hide occupied cells
             }
         }
     }
@@ -66,7 +63,7 @@ vector<vector<char>> Memory_Board::get_move_display_board(int move_x, int move_y
         for (int j = 0; j < 3; ++j) {
             if (real_board[i][j] != blank_symbol) {
                 if (i == move_x && j == move_y) {
-                    move_board[i][j] = symbol;      // Reveal just played
+                    move_board[i][j] = symbol;      // Reveal last play
                 } else {
                     move_board[i][j] = hidden_symbol; // Keep others hidden
                 }
@@ -120,7 +117,6 @@ void Memory_UI::display_board_matrix(const vector<vector<char>>& matrix) const {
 Move<char>* Memory_UI::get_move(Player<char>* player) {
     int x, y;
 
-    // Show hidden board ('?' and '.') so user knows where slots are
     cout << "\nCurrent board (all positions hidden):\n";
     display_board_matrix(memory_board->get_board_matrix());
 
@@ -130,7 +126,6 @@ Move<char>* Memory_UI::get_move(Player<char>* player) {
         cin >> x >> y;
     }
     else if (player->get_type() == PlayerType::COMPUTER) {
-        // Random AI that avoids already taken spots (cheat peek at board state)
         do {
             x = rand() % 3;
             y = rand() % 3;
@@ -164,7 +159,7 @@ void Memory_UI::run_game(Player<char>* players[2]) {
             cout << "Remember your move...\n\n";
             this_thread::sleep_for(chrono::milliseconds(1100)); // Wait 1.1 seconds
 
-            clear_screen(); // Wipe memory from screen
+            clear_screen();
 
             delete move;
 

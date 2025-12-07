@@ -146,7 +146,7 @@ int FourInRow_Board::evaluate_window(const vector<char>& window, char piece) {
     else if (piece_count == 3 && empty_count == 1) score += 5;
     else if (piece_count == 2 && empty_count == 2) score += 2;
 
-    if (opp_count == 3 && empty_count == 1) score -= 4; // Penalize if opponent is about to win
+    if (opp_count == 3 && empty_count == 1) score -= 4;
 
     return score;
 }
@@ -264,7 +264,7 @@ int FourInRow_Board::minimax(int depth, int alpha, int beta, bool maximizingPlay
 }
 
 int FourInRow_Board::get_best_move(char ai_symbol) {
-    int depth = 5; // Search depth
+    int depth = 5;
 
     vector<int> valid_moves = get_valid_moves();
     int bestVal = -2000000000;

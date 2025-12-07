@@ -83,7 +83,6 @@ public:
      */
     vector<pair<int, int>> get_valid_moves();
 
-    // --- Minimax helpers for AI ---
 
     /**
      * @brief Checks if a specific symbol has won.
@@ -143,4 +142,4 @@ public:
     Move<char>* get_move(Player<char>* player) override;
 };
 
-#endif // PYRAMID_CLASSES_H
+#endif

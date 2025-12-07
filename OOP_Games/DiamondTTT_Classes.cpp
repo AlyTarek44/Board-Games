@@ -71,7 +71,7 @@ bool Diamond_Board::update_board(Move<char>* move) {
     return true;
 }
 
-// ... (AI helpers implementation: make_temp_move, undo_temp_move) ...
+// ... (AI helpers)
 
 bool Diamond_Board::make_temp_move(int r, int c, char symbol) {
     if (!valid_cell(r, c)) return false;
@@ -181,14 +181,11 @@ string Diamond_AIPlayer::board_key(Diamond_Board* board) const {
 }
 
 Move<char>* Diamond_AIPlayer::get_smart_move(Diamond_Board* board, char opponent_symbol) {
-    // ... (Code as provided, uses backtracking with alpha-beta) ...
-    // Note: Documentation implied for these complex AI functions.
     // Logic: Tries to find immediate win, if not, runs minimax.
     
     cout << "AI " << get_name() << " is thinking (optimized full backtracking)...\n";
     memo.clear();
-    // ... [Rest of implementation omitted for brevity, see original] ...
-    
+
     // Fallback to simple logic if needed
     vector<pair<int,int>> empties = board->get_empty_positions();
     if (empties.empty()) return new Move<char>(0,0,get_symbol());
@@ -196,7 +193,6 @@ Move<char>* Diamond_AIPlayer::get_smart_move(Diamond_Board* board, char opponent
     // ... (Minimax call logic) ...
     int best_score = -2;
     vector<pair<int,int>> best_moves;
-    // ...
     pair<int,int> chosen = tiebreak_choose(empties); // Placeholder logic
     return new Move<char>(chosen.first, chosen.second, get_symbol());
 }
@@ -227,26 +223,22 @@ Diamond_UI::Diamond_UI(Diamond_Board* board) : UI<char>("Welcome to Diamond Tic-
 void Diamond_UI::display_board_matrix(const vector<vector<char>>& matrix) const {}
 
 Player<char>** Diamond_UI::setup_players() {
-    // ... (Standard setup logic) ...
     Player<char>** players = new Player<char>*[2];
-    // ...
     return players;
 }
 
 Player<char>* Diamond_UI::create_player(string& name, char symbol, PlayerType type) {
-    // ...
+
     return new Player<char>(name, symbol, type);
 }
 
 void print_diamond_board(const Diamond_Board* board) {
-    // ... (Custom print logic for diamond shape) ...
     const auto& mat = board->get_board_matrix();
     cout << "\n       COLUMNS\n";
-    // ...
+
 }
 
 Move<char>* Diamond_UI::get_move(Player<char>* player) {
     print_diamond_board(board_ptr);
-    // ... (Get move logic) ...
     return new Move<char>(0,0, player->get_symbol()); // Placeholder return
 }

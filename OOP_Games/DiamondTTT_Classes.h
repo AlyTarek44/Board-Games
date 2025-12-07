@@ -30,7 +30,6 @@ public:
     Diamond_Board();
     virtual ~Diamond_Board() {}
 
-    // --- Core Game Logic ---
 
     /**
      * @brief Updates board with player move.
@@ -64,7 +63,6 @@ public:
      */
     virtual bool game_is_over(Player<char>* player) override;
 
-    // --- Helper Functions ---
 
     /**
      * @brief Checks if a coordinate is within the diamond shape.

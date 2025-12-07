@@ -38,7 +38,6 @@ bool inf_xo_Board::update_board(Move<char> *move) {
     counter++;
 
     // Logic to remove the oldest move if limit is reached.
-    // Note: The logic here seems to check n_moves (global) and counter.
     if (n_moves == 3) {
         auto oldest_move = moves.front();
         moves.pop_front();

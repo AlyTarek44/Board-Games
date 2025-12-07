@@ -29,7 +29,6 @@ FourByFour_Board::FourByFour_Board() : Board(4, 4) {
 }
 
 bool FourByFour_Board::update_board(Move<char> *move) {
-    // We know in this game we always pass FourByFour_Move
     FourByFour_Move *m = static_cast<FourByFour_Move *>(move);
 
     int fr = m->get_from_r();
@@ -172,9 +171,7 @@ vector<FourByFour_Move> FourByFour_Board::get_valid_moves(char symbol) {
     return moves;
 }
 
-// Optional simple heuristic: number of possible 3-in-a-rows (very rough)
 int FourByFour_Board::calc_heuristic_value(char ai_symbol, char opp_symbol) {
-    // Very simple placeholder: can be improved
     int score = 0;
 
     if (check_win_for_symbol(ai_symbol)) score += 1000;
@@ -196,9 +193,8 @@ Player<char> *FourByFour_UI::create_player(string &name, char symbol, PlayerType
     return new Player<char>(name, symbol, type);
 }
 
-// Minimax (depth-limited, no alpha-beta)
+
 int FourByFour_UI::minimax(int depth, bool isMaximizing, char ai_symbol, char opp_symbol) {
-    // Check terminal states
     if (board_ptr->check_win_for_symbol(ai_symbol))
         return 1000 + depth; // earlier win is better
 
@@ -297,7 +293,6 @@ FourByFour_Move FourByFour_UI::find_best_move(char ai, char opp, int depth) {
 Move<char> *FourByFour_UI::get_move(Player<char> *player) {
     char symbol = player->get_symbol();
 
-    // Human move
     if (player->get_type() == PlayerType::HUMAN) {
         int fr, fc, tr, tc;
 
@@ -326,7 +321,6 @@ Move<char> *FourByFour_UI::get_move(Player<char> *player) {
             return new FourByFour_Move(fr, fc, tr, tc, symbol);
         }
     } else {
-        // AI move
         char opp = (symbol == 'X') ? 'O' : 'X';
 
         FourByFour_Move best = find_best_move(symbol, opp, 6);

@@ -57,8 +57,7 @@ bool Misere_Board::player_has_three(char symbol) const {
 }
 
 bool Misere_Board::is_win(Player<char>* /*player*/) {
-    // In Misere, making a line is losing, so you never "win" by placing a piece.
-    // The other player loses on their turn.
+    // In Misere, you win by making your opponent lose
     return false;
 }
 
@@ -78,7 +77,6 @@ bool Misere_Board::game_is_over(Player<char>* player) {
     return is_lose(player) || is_draw(player);
 }
 
-// ... Helper functions for AI (cell_empty, get_empty_cells, make_temp_move, undo_temp_move) ...
 
 bool Misere_Board::cell_empty(int r, int c) const {
     return board[r][c] == blank_symbol;
@@ -253,7 +251,7 @@ pair<int,int> Misere_AIPlayer::tiebreak_choose(const vector<pair<int,int>>& choi
     for (auto c : corners) {
         for (auto p : choices) if (p == c) return p; // Prefer Corners
     }
-    return choices.front(); // Then Sides
+    return choices.front();
 }
 
 // -----------------------------------------------------------------------------
@@ -265,7 +263,6 @@ Misere_UI::Misere_UI(Misere_Board* board) : UI<char>("Welcome to Misere Tic-Tac-
 }
 
 Player<char>** Misere_UI::setup_players() {
-    // ... Standard setup logic ...
     Player<char>** players = new Player<char>*[2];
     vector<string> type_options = { "Human", "Computer" };
 
@@ -290,7 +287,6 @@ Player<char>* Misere_UI::create_player(string& name, char symbol, PlayerType typ
 Move<char>* Misere_UI::get_move(Player<char>* player) {
     char sym = player->get_symbol();
     if (player->get_type() == PlayerType::HUMAN) {
-        // ... Input loop ...
         int r, c;
         while(true) {
             cout << player->get_name() << " (" << sym << ") Enter row col: ";

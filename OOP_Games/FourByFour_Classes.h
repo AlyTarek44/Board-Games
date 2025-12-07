@@ -89,7 +89,6 @@ public:
      */
     bool game_is_over(Player<char>* player) override;
 
-    // Helper functions for AI
 
     /**
      * @brief Gets all valid sliding moves for a symbol.
@@ -119,7 +118,6 @@ class FourByFour_UI : public UI<char> {
 private:
     FourByFour_Board* board_ptr;
 
-    // Minimax Algorithm
     int minimax(int depth, bool isMaximizing, char ai_symbol, char opp_symbol);
     FourByFour_Move find_best_move(char ai, char opp, int depth);
 

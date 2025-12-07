@@ -43,7 +43,7 @@ bool obstacles_TTT_board::update_board(Move<char> *move) {
 
      // Place obstacles randomly every 2 moves
      if (n_moves % 2 == 0) {
-         for (int i = 0; i < 2; i++) { // Place up to 2 obstacles? (Logic in snippet implies 2 iterations)
+         for (int i = 0; i < 2; i++) {
               auto moves = get_moves();
               if (!moves.empty()) {
                    int r = rand() % moves.size();
@@ -64,14 +64,7 @@ bool obstacles_TTT_board::check_win() {
      // Check rows (scan for 4 in a row)
      for (int i = 0; i < rows; i++) {
           for (int j = 0; j < columns; j++) {
-               if (i + 3 >= rows) break; // Optimization: cant fit 4 vertically starting here? Wait, this loop is rows...
-               // Note: Logic in provided snippet seemed to mix indices slightly, standardizing 4-check:
-
-               // Logic from original snippet:
-               // Row check needs columns index j to go up to col-3
-               // The provided snippet: checks board[i+k][j] (vertical) inside row loops?
-               // Let's implement standard 4-way check correctly.
-
+               if (i + 3 >= rows) break;
                // 1. Horizontal
                if (j + 3 < columns && all_equal(board[i][j], board[i][j+1], board[i][j+2], board[i][j+3])) return true;
 

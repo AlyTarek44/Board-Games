@@ -16,7 +16,6 @@
 
 using namespace std;
 
-// Forward declaration
 class NumTTT_Board;
 
 /**
@@ -77,7 +76,6 @@ public:
      */
     bool game_is_over(Player<int>* player) override;
 
-    // Accessors for UI to show what numbers are left
     const vector<int>& get_odd_nums() const { return odd_nums; }
     const vector<int>& get_even_nums() const { return even_nums; }
 };
@@ -117,4 +115,4 @@ public:
     Player<int>** setup_players() override;
 };
 
-#endif // NUMTTT_CLASSES_H
+#endif

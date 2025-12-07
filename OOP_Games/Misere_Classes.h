@@ -59,12 +59,10 @@ public:
      */
     virtual bool game_is_over(Player<char>* player) override;
 
-    // --- AI Helper Functions ---
     bool player_has_three(char symbol) const;
     bool cell_empty(int r, int c) const;
     vector<pair<int,int>> get_empty_cells() const;
 
-    // Simulation methods for backtracking
     bool make_temp_move(int r, int c, char symbol);
     void undo_temp_move(int r, int c);
 

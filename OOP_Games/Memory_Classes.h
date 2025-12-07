@@ -117,4 +117,4 @@ public:
     void run_game(Player<char>* players[2]);
 };
 
-#endif // MEMORY_CLASSES_H
+#endif

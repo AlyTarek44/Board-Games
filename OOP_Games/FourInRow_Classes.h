@@ -56,7 +56,6 @@ private:
      */
     int get_next_empty_row(int col);
 
-    // --- AI Helper Functions ---
 
     /**
      * @brief Evaluates a window of 4 cells for scoring.
@@ -90,7 +89,6 @@ public:
      */
     FourInRow_Board();
 
-    // --- Base class overrides ---
 
     /**
      * @brief Updates the board by dropping a piece into a column.
@@ -126,7 +124,6 @@ public:
      */
     bool game_is_over(Player<char>* player) override;
 
-    // --- Helper for UI and AI ---
 
     /**
      * @brief Validates if a move can be made in the given column.
@@ -141,7 +138,6 @@ public:
      */
     vector<int> get_valid_moves();
 
-    // --- AI Entry Point ---
 
     /**
      * @brief Determines the best move for the AI using Minimax.

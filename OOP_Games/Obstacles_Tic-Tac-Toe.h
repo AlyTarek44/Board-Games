@@ -110,4 +110,4 @@ public:
     Move<char> *get_move(Player<char> *);
 };
 
-#endif //OBSTACLES_TIC_TAC_TOE_H
+#endif

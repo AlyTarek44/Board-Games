@@ -1,160 +1,219 @@
 #include "Pyramid_Classes.h"
 #include <iostream>
 #include <iomanip>
+#include <algorithm>   // for std::max, std::min
+#include <vector>
 
 using namespace std;
 
+// -----------------------------------------------------------------------------
+// Pyramid_Board Implementation
+// -----------------------------------------------------------------------------
 
-// Initialize the board
-bool Pyramid_Board::is_valid_position(int x, int y) {
-    // Geometry of the pyramid
-    if (x == 0 && y == 2) return true;
-    if (x == 1 && y >= 1 && y <= 3) return true;
-    if (x == 2 && y >= 0 && y <= 4) return true;
+// Helper: check if (row, col) is a valid cell in the pyramid shape
+bool Pyramid_Board::is_valid_position(int row, int col) {
+    // Row 0: only col 2
+    if (row == 0 && col == 2) return true;
+
+    // Row 1: cols 1,2,3
+    if (row == 1 && col >= 1 && col <= 3) return true;
+
+    // Row 2: cols 0,1,2,3,4
+    if (row == 2 && col >= 0 && col <= 4) return true;
+
+    // Anything else is invalid
     return false;
 }
+
 Pyramid_Board::Pyramid_Board() : Board(3, 5) {
-    // Initialize the board.
-    // We mark invalid cells with spaces ' ' and valid cells with standard dots '.'
-    // Valid cells: (0,2), (1,1..3), (2,0..4)
-    for (int i = 0; i < rows; i++) {
-        for (int j = 0; j < columns; j++) {
-            if (is_valid_position(i, j)) {
-                board[i][j] = '.'; // Valid empty cell
+    // Initialize board with a pyramid layout:
+    // - Valid cells: '.'
+    // - Invalid cells: ' ' (space)
+    for (int row = 0; row < rows; ++row) {
+        for (int col = 0; col < columns; ++col) {
+            if (is_valid_position(row, col)) {
+                board[row][col] = '.'; // empty valid cell
             } else {
-                board[i][j] = ' '; // Invalid cell (outside pyramid)
+                board[row][col] = ' '; // invalid cell (outside pyramid)
             }
         }
     }
 }
 
+bool Pyramid_Board::update_board(Move<char> *move) {
+    int row = move->get_x();
+    int col = move->get_y();
+    char token = move->get_symbol();
 
-bool Pyramid_Board::update_board(Move<char>* move) {
-    int x = move->get_x();
-    int y = move->get_y();
-    char symbol = move->get_symbol();
-
-    if (x < 0 || x >= rows || y < 0 || y >= columns) {
+    // Basic bounds check
+    if (row < 0 || row >= rows || col < 0 || col >= columns)
         return false;
-    }
 
-    if (!is_valid_position(x, y)) {
+    // Must be a valid pyramid position
+    if (!is_valid_position(row, col))
         return false;
-    }
 
-    if (board[x][y] != '.') {
+    // Cell must be empty
+    if (board[row][col] != '.')
         return false;
-    }
 
-    board[x][y] = symbol;
+    // Place the token
+    board[row][col] = token;
     n_moves++;
     return true;
 }
 
-bool Pyramid_Board::is_win(Player<char>* player) {
-    char s = player->get_symbol();
-    
-    // Check all winning lines
-    
-    // Horizontal
+bool Pyramid_Board::is_win(Player<char> *player) {
+    return check_win_symbol(player->get_symbol());
+}
+
+// Check if the given symbol has a winning line
+bool Pyramid_Board::check_win_symbol(char s) {
+    // Horizontal lines
     if (board[1][1] == s && board[1][2] == s && board[1][3] == s) return true;
+
     if (board[2][0] == s && board[2][1] == s && board[2][2] == s) return true;
     if (board[2][1] == s && board[2][2] == s && board[2][3] == s) return true;
     if (board[2][2] == s && board[2][3] == s && board[2][4] == s) return true;
 
-    // Vertical
+    // Vertical line
     if (board[0][2] == s && board[1][2] == s && board[2][2] == s) return true;
 
-    // Diagonal
+    // Diagonals from the top
     if (board[0][2] == s && board[1][1] == s && board[2][0] == s) return true;
     if (board[0][2] == s && board[1][3] == s && board[2][4] == s) return true;
 
     return false;
 }
 
-bool Pyramid_Board::is_lose(Player<char>* player) {
+bool Pyramid_Board::is_lose(Player<char> *player) {
     return false;
 }
 
-bool Pyramid_Board::is_draw(Player<char>* player) {
-    // Total valid cells = 1 + 3 + 5 = 9.
+bool Pyramid_Board::is_draw(Player<char> *player) {
     return (n_moves == 9 && !is_win(player));
 }
 
-bool Pyramid_Board::game_is_over(Player<char>* player) {
+bool Pyramid_Board::game_is_over(Player<char> *player) {
     return is_win(player) || is_draw(player);
 }
 
-vector<pair<int, int>> Pyramid_Board::get_valid_moves() {
-    vector<pair<int, int>> moves;
-    for (int i = 0; i < rows; ++i) {
-        for (int j = 0; j < columns; ++j) {
-            if (is_valid_position(i, j) && board[i][j] == '.') {
-                moves.push_back({i, j});
+// Collect all currently available moves (empty valid cells)
+vector<pair<int, int> > Pyramid_Board::get_valid_moves() {
+    vector<pair<int, int> > moves;
+
+    for (int row = 0; row < rows; ++row) {
+        for (int col = 0; col < columns; ++col) {
+            if (is_valid_position(row, col) && board[row][col] == '.') {
+                moves.push_back({row, col});
             }
         }
     }
     return moves;
 }
 
-int Pyramid_Board::evaluate_move(int x, int y, char symbol) {
-    // Simple heuristic for AI:
-    // 1. Win immediately
-    // 2. Block opponent win
-    
-    char original = board[x][y];
-    char opponent = (symbol == 'X') ? 'O' : 'X';
-    
-    // Check for win
-    board[x][y] = symbol;
+// Minimax Algorithm
 
-    bool win = false;
-    if ((board[1][1]==symbol && board[1][2]==symbol && board[1][3]==symbol) ||
-        (board[2][0]==symbol && board[2][1]==symbol && board[2][2]==symbol) ||
-        (board[2][1]==symbol && board[2][2]==symbol && board[2][3]==symbol) ||
-        (board[2][2]==symbol && board[2][3]==symbol && board[2][4]==symbol) ||
-        (board[0][2]==symbol && board[1][2]==symbol && board[2][2]==symbol) ||
-        (board[0][2]==symbol && board[1][1]==symbol && board[2][0]==symbol) ||
-        (board[0][2]==symbol && board[1][3]==symbol && board[2][4]==symbol)) {
-        win = true;
+
+int Pyramid_Board::minimax(int depth, bool isMaximizing,
+                           char aiSymbol, char humanSymbol) {
+    // 1) Check terminal positions
+    if (check_win_symbol(aiSymbol)) {
+        // AI wins: higher score is better, reward faster wins
+        return 10 - depth;
     }
-    
-    if (win) {
-        board[x][y] = original;
-        return 100; // Winning move
+    if (check_win_symbol(humanSymbol)) {
+        // Human wins: lower score for AI, we prefer to delay this
+        return depth - 10;
     }
 
-    // Check for blocking
-    board[x][y] = opponent;
-    bool block = false;
-    if ((board[1][1]==opponent && board[1][2]==opponent && board[1][3]==opponent) ||
-        (board[2][0]==opponent && board[2][1]==opponent && board[2][2]==opponent) ||
-        (board[2][1]==opponent && board[2][2]==opponent && board[2][3]==opponent) ||
-        (board[2][2]==opponent && board[2][3]==opponent && board[2][4]==opponent) ||
-        (board[0][2]==opponent && board[1][2]==opponent && board[2][2]==opponent) ||
-        (board[0][2]==opponent && board[1][1]==opponent && board[2][0]==opponent) ||
-        (board[0][2]==opponent && board[1][3]==opponent && board[2][4]==opponent)) {
-        block = true;
+    // Check if there are no more moves (draw)
+    vector<pair<int, int> > validMoves = get_valid_moves();
+    if (validMoves.empty()) {
+        return 0; // Draw
     }
-    
-    board[x][y] = original; // Reset
-    
-    if (block) return 50; // Blocking move
-    if (x == 1 && y == 2) return 10; // Center is good
-    if (x == 0 && y == 2) return 10; // Top is good
-    
-    return 1; // Standard move
+
+    // 2) Recursive search
+    if (isMaximizing) {
+        int bestScore = -1000;
+
+        for (auto &move: validMoves) {
+            int row = move.first;
+            int col = move.second;
+
+            // Try this move for AI
+            board[row][col] = aiSymbol;
+
+            int score = minimax(depth + 1, false, aiSymbol, humanSymbol);
+
+            // Undo the move
+            board[row][col] = '.';
+
+            bestScore = max(bestScore, score);
+        }
+        return bestScore;
+    } else {
+        int bestScore = 1000;
+
+        for (auto &move: validMoves) {
+            int row = move.first;
+            int col = move.second;
+
+            // Try this move for the human
+            board[row][col] = humanSymbol;
+
+            int score = minimax(depth + 1, true, aiSymbol, humanSymbol);
+
+            // Undo the move
+            board[row][col] = '.';
+
+            bestScore = min(bestScore, score);
+        }
+        return bestScore;
+    }
+}
+
+
+// Choose the best move for the AI by running minimax on each option
+pair<int, int> Pyramid_Board::get_best_move(char aiSymbol) {
+    char humanSymbol = (aiSymbol == 'X') ? 'O' : 'X';
+    vector<pair<int, int> > validMoves = get_valid_moves();
+
+    int bestScore = -1000;
+    pair<int, int> bestMove = {-1, -1};
+
+    for (auto &move: validMoves) {
+        int row = move.first;
+        int col = move.second;
+
+        // Try this move for the AI
+        board[row][col] = aiSymbol;
+
+        // Now it's the human's turn -> isMaximizing = false
+        int score = minimax(0, false, aiSymbol, humanSymbol);
+
+        // Undo the move
+        board[row][col] = '.';
+
+        if (score > bestScore) {
+            bestScore = score;
+            bestMove = move;
+        }
+    }
+
+    return bestMove;
 }
 
 // --- Pyramid_UI Implementation ---
 
-Pyramid_UI::Pyramid_UI(Pyramid_Board* board) : UI<char>("Welcome to Pyramid Tic-Tac-Toe!", 3), board_ptr(board) {}
+Pyramid_UI::Pyramid_UI(Pyramid_Board *board) : UI<char>("Welcome to Pyramid Tic-Tac-Toe!", 3), board_ptr(board) {
+}
 
-Player<char>* Pyramid_UI::create_player(string& name, char symbol, PlayerType type) {
+Player<char> *Pyramid_UI::create_player(string &name, char symbol, PlayerType type) {
     return new Player<char>(name, symbol, type);
 }
 
-Move<char>* Pyramid_UI::get_move(Player<char>* player) {
+Move<char> *Pyramid_UI::get_move(Player<char> *player) {
     if (player->get_type() == PlayerType::HUMAN) {
         int x, y;
         while (true) {
@@ -173,21 +232,8 @@ Move<char>* Pyramid_UI::get_move(Player<char>* player) {
         }
         return new Move<char>(x, y, player->get_symbol());
     } else {
-        // AI Logic
-        vector<pair<int, int>> valid_moves = board_ptr->get_valid_moves();
-        if (valid_moves.empty()) return new Move<char>(-1, -1, ' ');
-
-        int best_score = -1;
-        pair<int, int> best_move = valid_moves[0];
-
-        for (auto& move : valid_moves) {
-            int score = board_ptr->evaluate_move(move.first, move.second, player->get_symbol());
-            if (score > best_score) {
-                best_score = score;
-                best_move = move;
-            }
-        }
-        
+        // AI Logic using Minimax
+        pair<int, int> best_move = board_ptr->get_best_move(player->get_symbol());
         cout << "Player " << player->get_name() << " chooses " << best_move.first << " " << best_move.second << endl;
         return new Move<char>(best_move.first, best_move.second, player->get_symbol());
     }

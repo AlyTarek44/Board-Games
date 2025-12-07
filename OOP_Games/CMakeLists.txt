@@ -21,4 +21,6 @@ add_executable(
         DiamondTTT_Classes.cpp
         Memory_Classes.cpp
         ultimateTTT_Classes.cpp
+        Obstacles_Tic-Tac-Toe.cpp
+        FourByFour_Classes.cpp
 )

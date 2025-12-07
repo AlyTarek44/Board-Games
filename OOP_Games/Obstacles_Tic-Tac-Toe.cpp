@@ -179,27 +179,3 @@ Move<char> *obstacles_TTT_UI::get_move(Player<char> *player) {
           return new Move<char>(x,y,player->get_symbol());
      }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

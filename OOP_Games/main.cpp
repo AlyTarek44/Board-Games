@@ -15,6 +15,7 @@
 #include "ultimateTTT_Classes.h"
 #include "Memory_Classes.h"
 #include "Obstacles_Tic-Tac-Toe.h"
+#include "FourByFour_Classes.h"
 
 
 using namespace std;
@@ -149,6 +150,24 @@ void run_SUS() {
     }
     delete[] players;
 }
+void run_FourByFour() {
+    srand(static_cast<unsigned int>(time(0)));
+    FourByFour_Board *board = new FourByFour_Board();
+    FourByFour_UI *ui = new FourByFour_UI(board);
+
+    Player<char> **players = ui->setup_players();
+
+    GameManager<char> gm(board, players, ui);
+    gm.run();
+
+    delete board;
+    delete ui;
+    for (int i = 0; i < 2; ++i) {
+        delete players[i];
+    }
+    delete[] players;
+
+}
 void run_Pyramid() {
     srand(static_cast<unsigned int>(time(0)));
 
@@ -279,6 +298,7 @@ int main() {
         cout << "11. Ultimate Tic-Tac-Toe\n";
         cout << "12. Memory Tic-Tac-Toe\n";
         cout << "13. Obstacles Tic-Tac-Toe\n";
+        cout << "14. FourByFour Tic-Tac-Toe\n";
         cout << "0. Exit\n";
         cout << "Enter your choice: ";
 
@@ -315,11 +335,12 @@ int main() {
             case 12:run_Memory(); break;
 
             case 13:run_Obstacles(); break;
+            case 14:run_FourByFour(); break;
 
             case 0:cout << "Goodbye!\n";return 0;
 
             default:
-                cout << "Invalid choice. Please select [1,2,3,4,5,6,7,8,9,10,11,12,13,0].\n";
+                cout << "Invalid choice. Please select [1,2,3,4,5,6,7,8,9,10,11,12,13,14,0].\n";
         }
     }
 }

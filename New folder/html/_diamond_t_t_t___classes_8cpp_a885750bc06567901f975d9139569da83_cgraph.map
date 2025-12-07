@@ -1,5 +1,0 @@
-<map id="print_diamond_board" name="print_diamond_board">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,147,32"/>
-<area shape="rect" id="Node000002" href="$class_board.html#a117f2e61fdb7deccca333bbbc9c62d3a" title="Return a copy of the current board as a 2D vector." alt="" coords="195,5,358,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="147,16,182,19,176,19,147,21"/>
-</map>

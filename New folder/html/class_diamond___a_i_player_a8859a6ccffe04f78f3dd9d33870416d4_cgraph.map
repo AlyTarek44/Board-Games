@@ -1,9 +1,0 @@
-<map id="Diamond_AIPlayer::get_smart_move" name="Diamond_AIPlayer::get_smart_move">
-<area shape="rect" id="Node000001" title="Calculates best move for AI." alt="" coords="5,64,162,107"/>
-<area shape="rect" id="Node000002" href="$class_diamond___board.html#a458378f5f66fd5ed88bc912b7730d695" title="Gets all currently empty valid positions." alt="" coords="226,5,366,48"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="161,61,213,49,208,51,163,66"/>
-<area shape="rect" id="Node000003" href="$class_player.html#aed2af19790ba73190e3ebeea589518e1" title=" " alt="" coords="210,72,382,99"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="162,83,197,85,192,86,163,88"/>
-<area shape="rect" id="Node000004" href="$class_player.html#af56f0bf98c0423a3a75b0848607d03a4" title=" " alt="" coords="229,123,362,165"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="163,104,217,121,211,122,162,110"/>
-</map>

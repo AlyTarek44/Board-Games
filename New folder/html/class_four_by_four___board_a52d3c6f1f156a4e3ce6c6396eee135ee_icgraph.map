@@ -1,5 +1,0 @@
-<map id="FourByFour_Board::is_draw" name="FourByFour_Board::is_draw">
-<area shape="rect" id="Node000001" title="Checks if draw." alt="" coords="224,13,407,40"/>
-<area shape="rect" id="Node000002" href="$class_four_by_four___board.html#aabc6e24e6cc932ae7ea415034093d154" title="Checks if game is over." alt="" coords="5,5,176,48"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="206,27,176,29,176,24,211,26"/>
-</map>

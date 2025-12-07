@@ -1,9 +1,0 @@
-<map id="Pyramid_Board::get_valid_moves" name="Pyramid_Board::get_valid_moves">
-<area shape="rect" id="Node000001" title="Returns a list of all valid empty cells (used by AI)." alt="" coords="405,5,541,48"/>
-<area shape="rect" id="Node000002" href="$class_pyramid___board.html#af430ff09c33d83678fe311c38f2e0e47" title="Computes the best move for the AI using Minimax." alt="" coords="5,5,142,48"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="387,17,357,17,273,14,190,17,143,21,142,16,190,12,273,9,357,12,392,17"/>
-<area shape="rect" id="Node000003" href="$class_pyramid___board.html#aff6d7fcb1a2b45fb496bbd3c53053655" title="The Minimax recursive algorithm." alt="" coords="190,51,357,77"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="392,42,349,53,348,47,387,43"/>
-<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="181,48,142,42,142,37,186,47"/>
-<area shape="poly" id="edge4_Node000003_Node000003" title=" " alt="" coords="306,35,296,32,273,29,252,31,241,36,239,41,244,51,239,49,233,42,237,32,251,26,273,24,297,27,311,36"/>
-</map>

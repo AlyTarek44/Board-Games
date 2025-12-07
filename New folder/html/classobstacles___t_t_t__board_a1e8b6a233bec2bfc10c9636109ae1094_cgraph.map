@@ -1,5 +1,0 @@
-<map id="obstacles_TTT_board::is_win" name="obstacles_TTT_board::is_win">
-<area shape="rect" id="Node000001" title="Checks if the player has won (4&#45;in&#45;a&#45;row)." alt="" coords="5,5,153,48"/>
-<area shape="rect" id="Node000002" href="$classobstacles___t_t_t__board.html#aecf94b02cced55b8f42a99f6a0376711" title="Helper function to check for 4 consecutive symbols." alt="" coords="201,5,348,48"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="153,24,187,26,182,27,153,29"/>
-</map>

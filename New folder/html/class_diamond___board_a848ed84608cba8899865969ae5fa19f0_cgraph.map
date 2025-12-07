@@ -1,7 +1,0 @@
-<map id="Diamond_Board::is_win" name="Diamond_Board::is_win">
-<area shape="rect" id="Node000001" title="Checks if player has won (e.g. formed specific patterns)." alt="" coords="5,35,165,61"/>
-<area shape="rect" id="Node000002" href="$class_player.html#af56f0bf98c0423a3a75b0848607d03a4" title="Get the player&#39;s symbol." alt="" coords="237,5,370,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="164,35,225,29,220,30,166,40"/>
-<area shape="rect" id="Node000003" href="$class_diamond___board.html#a40d33537df34cc2c0542658bb23bb2d2" title="Checks if placing a symbol at (r,c) creates the winning configuration. A win usually requires specifi..." alt="" coords="213,56,395,99"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="165,56,200,63,194,63,165,61"/>
-</map>

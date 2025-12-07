@@ -1,5 +1,0 @@
-<map id="X_O_Board::X_O_Board" name="X_O_Board::X_O_Board">
-<area shape="rect" id="Node000001" title="Default constructor that initializes a 3x3 X&#45;O board." alt="" coords="5,5,169,32"/>
-<area shape="rect" id="Node000002" href="$class_board.html#ae5dfded241ee3644196e2f6074d1d0b1" title=" " alt="" coords="217,5,363,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="169,16,204,19,198,19,169,21"/>
-</map>

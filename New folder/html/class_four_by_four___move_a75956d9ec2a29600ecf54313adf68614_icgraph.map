@@ -1,7 +1,0 @@
-<map id="FourByFour_Move::get_from_r" name="FourByFour_Move::get_from_r">
-<area shape="rect" id="Node000001" title=" " alt="" coords="231,27,385,69"/>
-<area shape="rect" id="Node000002" href="$class_four_by_four___u_i.html#ac9a2e5cdee63dc50c8fbc9e6f8fa1c84" title="Ask the user (or AI) to make a move." alt="" coords="6,5,182,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="213,36,182,33,182,28,218,35"/>
-<area shape="rect" id="Node000003" href="$class_four_by_four___board.html#a508243332946c24d2e4be9154e4d3315" title="Updates the board (moves a piece from A to B)." alt="" coords="5,56,183,99"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="213,61,184,68,183,62,218,60"/>
-</map>

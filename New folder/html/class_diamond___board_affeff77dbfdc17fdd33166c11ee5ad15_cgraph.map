@@ -1,5 +1,0 @@
-<map id="Diamond_Board::undo_temp_move" name="Diamond_Board::undo_temp_move">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,156,48"/>
-<area shape="rect" id="Node000002" href="$class_diamond___board.html#a2d59e385450ce16357cbc16e92a2aa65" title="Checks if a coordinate is within the diamond shape." alt="" coords="204,13,380,40"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="156,24,191,26,185,27,156,29"/>
-</map>

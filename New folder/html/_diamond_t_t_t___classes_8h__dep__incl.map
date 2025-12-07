@@ -1,7 +1,0 @@
-<map id="OOP_Games/DiamondTTT_Classes.h" name="OOP_Games/DiamondTTT_Classes.h">
-<area shape="rect" id="Node000001" title="Header file for Diamond Tic&#45;Tac&#45;Toe." alt="" coords="101,5,281,48"/>
-<area shape="rect" id="Node000002" href="$_diamond_t_t_t___classes_8cpp.html" title="Implementation of Diamond Tic&#45;Tac&#45;Toe logic and AI." alt="" coords="5,96,185,139"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="160,58,119,98,116,94,155,60"/>
-<area shape="rect" id="Node000003" href="$main_8cpp.html" title="Main entry point for the Game Center application." alt="" coords="209,104,365,131"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="225,56,276,104,271,103,223,61"/>
-</map>

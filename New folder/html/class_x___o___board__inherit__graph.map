@@ -1,7 +1,0 @@
-<map id="X_O_Board" name="X_O_Board">
-<area shape="rect" id="Node000001" title="Represents the Tic&#45;Tac&#45;Toe game board." alt="" coords="34,421,147,597"/>
-<area shape="rect" id="Node000003" href="$classinf__xo___board.html" title="Represents the Infinity Tic&#45;Tac&#45;Toe board." alt="" coords="5,645,176,779"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="92,610,93,646,88,645,90,615"/>
-<area shape="rect" id="Node000002" href="$class_board.html" title=" " alt="" coords="25,5,157,373"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="91,386,93,422,88,421,90,391"/>
-</map>

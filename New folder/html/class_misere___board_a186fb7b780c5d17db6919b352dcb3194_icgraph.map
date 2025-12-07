@@ -1,5 +1,0 @@
-<map id="Misere_Board::is_lose" name="Misere_Board::is_lose">
-<area shape="rect" id="Node000001" title="Checks if player has lost (i.e., successfully made 3&#45;in&#45;a&#45;row)." alt="" coords="195,13,345,40"/>
-<area shape="rect" id="Node000002" href="$class_misere___board.html#afcca94e613d7d43fac5f6fe841d1d760" title="Checks if game is over." alt="" coords="5,5,147,48"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="176,27,147,29,147,24,182,26"/>
-</map>

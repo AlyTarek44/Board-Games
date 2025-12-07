@@ -1,9 +1,0 @@
-<map id="SUS_UI::setup_players" name="SUS_UI::setup_players">
-<area shape="rect" id="Node000001" title="Sets up both players." alt="" coords="5,56,165,83"/>
-<area shape="rect" id="Node000002" href="$class_s_u_s___u_i.html#ae510c6c91efc4a17d7dadb4282e00e84" title="Creates a player for SUS." alt="" coords="230,5,386,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="146,53,234,35,229,37,148,58"/>
-<area shape="rect" id="Node000003" href="$class_u_i.html#a7b1603de1f73fbb4006e4f00a27c44da" title=" " alt="" coords="213,56,404,83"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="164,67,199,69,194,70,165,72"/>
-<area shape="rect" id="Node000004" href="$class_u_i.html#ac3d45fea2bbcaa0372d8e5101e116ca1" title=" " alt="" coords="232,107,384,149"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="139,81,220,103,215,105,138,86"/>
-</map>

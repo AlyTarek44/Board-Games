@@ -1,5 +1,0 @@
-<map id="obstacles_TTT_board::is_draw" name="obstacles_TTT_board::is_draw">
-<area shape="rect" id="Node000001" title="Checks if the game is a draw." alt="" coords="5,5,153,48"/>
-<area shape="rect" id="Node000002" href="$classobstacles___t_t_t__board.html#af8d3dbdaa3ae58b4294aea72af0bc073" title="Returns list of all empty cells." alt="" coords="201,5,348,48"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="153,24,187,26,182,27,153,29"/>
-</map>

@@ -1,5 +1,0 @@
-<map id="Memory_Board::is_draw" name="Memory_Board::is_draw">
-<area shape="rect" id="Node000001" title="Checks for draw on real board." alt="" coords="203,13,365,40"/>
-<area shape="rect" id="Node000002" href="$class_memory___board.html#a41987fe4c5d073c06546789ba2db656d" title="Checks if game is over." alt="" coords="5,5,155,48"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="185,27,155,29,155,24,190,26"/>
-</map>

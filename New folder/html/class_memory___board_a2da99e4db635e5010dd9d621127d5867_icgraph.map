@@ -1,8 +1,0 @@
-<map id="Memory_Board::is_win" name="Memory_Board::is_win">
-<area shape="rect" id="Node000001" title="Standard Tic&#45;Tac&#45;Toe win check on the real board." alt="" coords="413,13,567,40"/>
-<area shape="rect" id="Node000002" href="$class_memory___board.html#a41987fe4c5d073c06546789ba2db656d" title="Checks if game is over." alt="" coords="5,5,155,48"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="397,29,155,29,155,24,398,24"/>
-<area shape="rect" id="Node000003" href="$class_memory___board.html#a794baa26eeaad82c5bfc97faa4049736" title="Checks for draw on real board." alt="" coords="203,39,365,65"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="400,38,366,45,365,39,395,38"/>
-<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="185,40,155,39,155,33,190,40"/>
-</map>

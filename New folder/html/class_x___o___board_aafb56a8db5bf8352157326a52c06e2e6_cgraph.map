@@ -1,5 +1,0 @@
-<map id="X_O_Board::is_win" name="X_O_Board::is_win">
-<area shape="rect" id="Node000001" title="Checks if the given player has won the game." alt="" coords="5,5,139,32"/>
-<area shape="rect" id="Node000002" href="$class_player.html#af56f0bf98c0423a3a75b0848607d03a4" title="Get the player&#39;s symbol." alt="" coords="187,5,320,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="139,16,174,18,169,19,139,21"/>
-</map>

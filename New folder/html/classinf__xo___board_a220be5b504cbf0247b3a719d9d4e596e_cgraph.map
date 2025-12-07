@@ -1,9 +1,0 @@
-<map id="inf_xo_Board::is_draw" name="inf_xo_Board::is_draw">
-<area shape="rect" id="Node000001" title="Checks for a draw condition (rare in this variant)." alt="" coords="5,43,156,69"/>
-<area shape="rect" id="Node000002" href="$classinf__xo___board.html#a122ecad1b0af676f137184229cca06b5" title="Checks if there are any empty cells left." alt="" coords="204,5,344,48"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="156,42,191,39,186,40,157,47"/>
-<area shape="rect" id="Node000003" href="$class_x___o___board.html#aafb56a8db5bf8352157326a52c06e2e6" title="Checks if the given player has won the game." alt="" coords="207,72,340,99"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="156,65,195,73,189,73,156,70"/>
-<area shape="rect" id="Node000004" href="$class_player.html#af56f0bf98c0423a3a75b0848607d03a4" title="Get the player&#39;s symbol." alt="" coords="392,72,525,99"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="341,83,379,85,374,85,341,88"/>
-</map>

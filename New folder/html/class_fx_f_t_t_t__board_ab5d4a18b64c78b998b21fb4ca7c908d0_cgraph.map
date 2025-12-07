@@ -1,9 +1,0 @@
-<map id="FxFTTT_board::update_board" name="FxFTTT_board::update_board">
-<area shape="rect" id="Node000001" title="Updates the board with a move." alt="" coords="5,48,160,91"/>
-<area shape="rect" id="Node000002" href="$class_move.html#a595bf740852c05a1cb425ef2640fd4ff" title="Get the move symbol." alt="" coords="208,5,336,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="159,46,207,36,202,38,161,51"/>
-<area shape="rect" id="Node000003" href="$class_move.html#a9d4f543a81e361f872d37bcfb64d5b55" title="Get row index." alt="" coords="225,56,318,83"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="160,67,212,69,207,70,161,72"/>
-<area shape="rect" id="Node000004" href="$class_move.html#a96469802a55c9083a1e93c7edec8a00c" title="Get column index." alt="" coords="225,107,318,133"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="161,87,213,103,208,104,160,93"/>
-</map>

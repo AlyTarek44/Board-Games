@@ -1,5 +1,0 @@
-<map id="word_xo_board" name="word_xo_board">
-<area shape="rect" id="Node000001" title="Board that validates English words for win condition." alt="" coords="9,421,133,704"/>
-<area shape="rect" id="Node000002" href="$class_board.html" title=" " alt="" coords="5,5,137,373"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="72,386,74,422,69,421,71,391"/>
-</map>

@@ -1,5 +1,0 @@
-<map id="SUS_Board::get_valid_moves" name="SUS_Board::get_valid_moves">
-<area shape="rect" id="Node000001" title="Returns list of valid moves." alt="" coords="240,5,390,48"/>
-<area shape="rect" id="Node000002" href="$class_s_u_s___board.html#a8a8635e3c0efc7753b448ee3d0fdd64b" title="Heuristic evaluation for AI to determine move quality." alt="" coords="5,13,192,40"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="221,27,192,29,192,24,227,26"/>
-</map>

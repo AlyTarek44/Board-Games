@@ -1,9 +1,0 @@
-<map id="FourByFour_Board::check_win_for_symbol" name="FourByFour_Board::check_win_for_symbol">
-<area shape="rect" id="Node000001" title="Checks if a specific symbol has a winning line." alt="" coords="447,35,620,77"/>
-<area shape="rect" id="Node000002" href="$class_four_by_four___board.html#a4000ef9e49c18ad39f339c3bc9e673c6" title="Heuristic evaluation for AI." alt="" coords="230,5,392,48"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="429,43,393,40,393,35,434,42"/>
-<area shape="rect" id="Node000003" href="$class_four_by_four___board.html#a6768a15f3eab1a1dca9d5fa733366f71" title="Checks if player has won (3&#45;in&#45;a&#45;row)." alt="" coords="224,72,399,99"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="434,69,400,76,399,71,429,70"/>
-<area shape="rect" id="Node000004" href="$class_four_by_four___board.html#aabc6e24e6cc932ae7ea415034093d154" title="Checks if game is over." alt="" coords="5,64,176,107"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="205,86,176,88,176,83,211,85"/>
-</map>

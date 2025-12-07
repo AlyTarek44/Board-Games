@@ -1,7 +1,0 @@
-<map id="word_xo_board::word_xo_board" name="word_xo_board::word_xo_board">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,27,151,69"/>
-<area shape="rect" id="Node000002" href="$class_board.html#ae5dfded241ee3644196e2f6074d1d0b1" title=" " alt="" coords="199,5,345,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="150,34,186,31,181,33,152,40"/>
-<area shape="rect" id="Node000003" href="$classword__xo__board.html#a8968a81ed6cb524298ad8527db5cdbc8" title="Loads dic.txt into the set." alt="" coords="201,56,342,99"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="151,56,188,64,183,65,151,62"/>
-</map>

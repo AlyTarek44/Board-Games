@@ -1,7 +1,0 @@
-<map id="Ultimate_Board::get_allowed_moves" name="Ultimate_Board::get_allowed_moves">
-<area shape="rect" id="Node000001" title="Gets all allowed moves based on current state and forced board." alt="" coords="393,5,530,48"/>
-<area shape="rect" id="Node000002" href="$class_ultimate___a_i_player.html#a870fd872f7a71cefb661eae8cca951f6" title="Selects a move for the AI." alt="" coords="210,5,345,48"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="375,27,345,29,345,24,380,27"/>
-<area shape="rect" id="Node000003" href="$class_ultimate___u_i.html#a4c3e6b4f77e281d67a946df1620ef822" title="Ask the user (or AI) to make a move." alt="" coords="5,13,162,40"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="191,27,162,29,162,24,196,26"/>
-</map>

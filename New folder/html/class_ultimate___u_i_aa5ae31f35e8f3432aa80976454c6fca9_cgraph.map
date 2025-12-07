@@ -1,9 +1,0 @@
-<map id="Ultimate_UI::setup_players" name="Ultimate_UI::setup_players">
-<area shape="rect" id="Node000001" title="Set up players for the game." alt="" coords="5,64,137,107"/>
-<area shape="rect" id="Node000002" href="$class_ultimate___u_i.html#a8b7c8b09278cdef5dc878ef89eaa83e7" title="Create a player object based on input name, symbol, and type." alt="" coords="213,5,348,48"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="136,64,200,48,196,51,138,69"/>
-<area shape="rect" id="Node000003" href="$class_u_i.html#a7b1603de1f73fbb4006e4f00a27c44da" title=" " alt="" coords="185,72,376,99"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="137,83,171,84,166,86,138,88"/>
-<area shape="rect" id="Node000004" href="$class_u_i.html#ac3d45fea2bbcaa0372d8e5101e116ca1" title=" " alt="" coords="204,123,356,165"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="137,101,192,118,186,119,137,106"/>
-</map>

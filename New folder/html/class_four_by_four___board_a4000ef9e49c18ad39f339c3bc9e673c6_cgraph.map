@@ -1,5 +1,0 @@
-<map id="FourByFour_Board::calc_heuristic_value" name="FourByFour_Board::calc_heuristic_value">
-<area shape="rect" id="Node000001" title="Heuristic evaluation for AI." alt="" coords="5,5,168,48"/>
-<area shape="rect" id="Node000002" href="$class_four_by_four___board.html#a649373e4cb96663ec8dcd280586421ac" title="Checks if a specific symbol has a winning line." alt="" coords="216,5,389,48"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="168,24,203,26,197,27,168,29"/>
-</map>

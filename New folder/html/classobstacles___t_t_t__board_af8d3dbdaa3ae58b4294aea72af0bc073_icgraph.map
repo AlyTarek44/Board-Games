@@ -1,9 +1,0 @@
-<map id="obstacles_TTT_board::get_moves" name="obstacles_TTT_board::get_moves">
-<area shape="rect" id="Node000001" title="Returns list of all empty cells." alt="" coords="201,72,348,115"/>
-<area shape="rect" id="Node000002" href="$classobstacles___t_t_t__board.html#a1cab583d55004b3822e250df11635d61" title="Checks if the game is over (win or draw)." alt="" coords="5,5,153,48"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="193,68,144,51,143,46,198,66"/>
-<area shape="rect" id="Node000003" href="$classobstacles___t_t_t__board.html#af618dda8bb3bada7bdaecfdeed51aca9" title="Checks if the game is a draw." alt="" coords="5,72,153,115"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="182,94,154,96,153,91,187,92"/>
-<area shape="rect" id="Node000004" href="$classobstacles___t_t_t__board.html#a50f48588fda755979462649baa0dc008" title="Updates the board with the player&#39;s move and potentially adds obstacles." alt="" coords="5,139,153,181"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="198,119,144,141,143,136,193,121"/>
-</map>

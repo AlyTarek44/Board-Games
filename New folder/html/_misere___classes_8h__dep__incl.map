@@ -1,9 +1,0 @@
-<map id="OOP_Games/Misere_Classes.h" name="OOP_Games/Misere_Classes.h">
-<area shape="rect" id="Node000001" title="Header for Misere Tic&#45;Tac&#45;Toe." alt="" coords="226,5,434,32"/>
-<area shape="rect" id="Node000002" href="$_misere___classes_8cpp.html" title="Implementation of Misère (Inverse) Tic&#45;Tac&#45;Toe." alt="" coords="5,88,228,115"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="285,38,151,90,149,85,280,37"/>
-<area shape="rect" id="Node000003" href="$main_8cpp.html" title="Main entry point for the Game Center application." alt="" coords="252,88,408,115"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="332,46,332,89,328,86,328,50"/>
-<area shape="rect" id="Node000004" href="$word___tic-_tac-_toe_8cpp.html" title="Implementation of Word Tic&#45;Tac&#45;Toe." alt="" coords="432,80,588,123"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="372,36,466,79,461,79,371,41"/>
-</map>

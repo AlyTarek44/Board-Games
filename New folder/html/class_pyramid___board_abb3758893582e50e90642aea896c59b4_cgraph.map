@@ -1,7 +1,0 @@
-<map id="Pyramid_Board::Pyramid_Board" name="Pyramid_Board::Pyramid_Board">
-<area shape="rect" id="Node000001" title="Constructor. Initializes the pyramid shape." alt="" coords="5,27,172,69"/>
-<area shape="rect" id="Node000002" href="$class_board.html#ae5dfded241ee3644196e2f6074d1d0b1" title=" " alt="" coords="228,5,374,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="172,34,215,30,210,32,173,39"/>
-<area shape="rect" id="Node000003" href="$class_pyramid___board.html#abffbb8c10e4b26fd2188cd97ab166a43" title="Checks if a matrix coordinate corresponds to a valid pyramid cell." alt="" coords="220,56,382,99"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="172,57,207,64,202,64,172,62"/>
-</map>

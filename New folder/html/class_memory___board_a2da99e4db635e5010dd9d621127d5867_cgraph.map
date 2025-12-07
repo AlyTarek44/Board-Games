@@ -1,5 +1,0 @@
-<map id="Memory_Board::is_win" name="Memory_Board::is_win">
-<area shape="rect" id="Node000001" title="Standard Tic&#45;Tac&#45;Toe win check on the real board." alt="" coords="5,5,160,32"/>
-<area shape="rect" id="Node000002" href="$class_player.html#af56f0bf98c0423a3a75b0848607d03a4" title="Get the player&#39;s symbol." alt="" coords="208,5,341,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="160,16,195,19,189,19,160,21"/>
-</map>

@@ -1,5 +1,0 @@
-<map id="GameManager::GameManager" name="GameManager::GameManager">
-<area shape="rect" id="Node000001" title="Construct a game manager with board, players, and UI." alt="" coords="5,5,205,32"/>
-<area shape="rect" id="Node000002" href="$class_player.html#a3617a3ad0db435176a06948065f9a3a6" title="Assign the board pointer for the player." alt="" coords="253,5,398,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="205,16,240,19,234,19,205,21"/>
-</map>

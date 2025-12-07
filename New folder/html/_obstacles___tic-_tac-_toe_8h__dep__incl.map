@@ -1,7 +1,0 @@
-<map id="OOP_Games/Obstacles_Tic&#45;Tac&#45;Toe.h" name="OOP_Games/Obstacles_Tic&#45;Tac&#45;Toe.h">
-<area shape="rect" id="Node000001" title="Header for Obstacles Tic&#45;Tac&#45;Toe." alt="" coords="97,5,260,48"/>
-<area shape="rect" id="Node000002" href="$_obstacles___tic-_tac-_toe_8cpp.html" title="Implementation of Obstacles Tic&#45;Tac&#45;Toe." alt="" coords="5,96,168,139"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="149,58,109,98,106,94,144,60"/>
-<area shape="rect" id="Node000003" href="$main_8cpp.html" title="Main entry point for the Game Center application." alt="" coords="192,104,349,131"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="212,56,260,104,255,103,209,61"/>
-</map>

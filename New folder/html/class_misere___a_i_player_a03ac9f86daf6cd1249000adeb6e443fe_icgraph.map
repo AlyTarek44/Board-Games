@@ -1,5 +1,0 @@
-<map id="Misere_AIPlayer::get_smart_move" name="Misere_AIPlayer::get_smart_move">
-<area shape="rect" id="Node000001" title="Calculates smart move to avoid winning (losing)." alt="" coords="200,5,343,48"/>
-<area shape="rect" id="Node000002" href="$class_misere___u_i.html#a2279d52b8342c2742f7788c48a15d9f0" title="Ask the user (or AI) to make a move." alt="" coords="5,13,152,40"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="181,27,152,29,152,24,187,26"/>
-</map>

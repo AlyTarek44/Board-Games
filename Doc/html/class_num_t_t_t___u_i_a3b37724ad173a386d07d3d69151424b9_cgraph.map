@@ -1,0 +1,9 @@
+<map id="NumTTT_UI::get_move" name="NumTTT_UI::get_move">
+<area shape="rect" id="Node000001" title="Gets move. Asks for both position AND number to place." alt="" coords="5,56,165,83"/>
+<area shape="rect" id="Node000002" href="$class_player.html#aed2af19790ba73190e3ebeea589518e1" title="Get the player&#39;s name." alt="" coords="218,5,341,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="138,53,213,35,209,38,140,58"/>
+<area shape="rect" id="Node000003" href="$class_player.html#af56f0bf98c0423a3a75b0848607d03a4" title="Get the player&#39;s symbol." alt="" coords="213,56,346,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="164,67,199,69,194,70,165,72"/>
+<area shape="rect" id="Node000004" href="$class_player.html#a2df3bd299bf7aecfa2275ec6902a60f8" title="Get player type (e.g., &#39;H&#39; or &#39;C&#39;)." alt="" coords="221,107,338,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="140,81,214,102,208,103,139,86"/>
+</map>

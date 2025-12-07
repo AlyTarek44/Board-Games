@@ -1,0 +1,5 @@
+<map id="inf_xo_Board::check_available_moves" name="inf_xo_Board::check_available_moves">
+<area shape="rect" id="Node000001" title="Checks if there are any empty cells left." alt="" coords="204,5,344,48"/>
+<area shape="rect" id="Node000002" href="$classinf__xo___board.html#a220be5b504cbf0247b3a719d9d4e596e" title="Checks for a draw condition (rare in this variant)." alt="" coords="5,13,156,40"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="185,27,156,29,156,24,190,26"/>
+</map>

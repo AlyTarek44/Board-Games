@@ -1,0 +1,5 @@
+<map id="FxFTTT_board" name="FxFTTT_board">
+<area shape="rect" id="Node000001" title="Represents the 5x5 Tic&#45;Tac&#45;Toe board logic." alt="" coords="5,421,159,768"/>
+<area shape="rect" id="Node000002" href="$class_board.html" title=" " alt="" coords="16,5,148,373"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="83,386,85,422,80,422,82,391"/>
+</map>

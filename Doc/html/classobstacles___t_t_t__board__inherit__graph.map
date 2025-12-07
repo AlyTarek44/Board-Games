@@ -1,0 +1,5 @@
+<map id="obstacles_TTT_board" name="obstacles_TTT_board">
+<area shape="rect" id="Node000001" title="Represents the Obstacles Tic&#45;Tac&#45;Toe game board." alt="" coords="5,421,163,640"/>
+<area shape="rect" id="Node000002" href="$class_board.html" title=" " alt="" coords="18,5,150,373"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="85,385,87,422,82,421,84,391"/>
+</map>

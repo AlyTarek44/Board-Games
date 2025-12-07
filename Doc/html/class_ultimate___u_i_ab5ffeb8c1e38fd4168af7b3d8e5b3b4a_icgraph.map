@@ -1,0 +1,5 @@
+<map id="Ultimate_UI::print_full_board" name="Ultimate_UI::print_full_board">
+<area shape="rect" id="Node000001" title=" " alt="" coords="210,5,334,48"/>
+<area shape="rect" id="Node000002" href="$class_ultimate___u_i.html#a4c3e6b4f77e281d67a946df1620ef822" title="Ask the user (or AI) to make a move." alt="" coords="5,13,162,40"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="191,27,162,29,162,24,197,26"/>
+</map>

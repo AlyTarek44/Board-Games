@@ -1,0 +1,19 @@
+<map id="Ultimate_UI::get_move" name="Ultimate_UI::get_move">
+<area shape="rect" id="Node000001" title="Ask the user (or AI) to make a move." alt="" coords="5,157,162,184"/>
+<area shape="rect" id="Node000002" href="$class_ultimate___a_i_player.html#a870fd872f7a71cefb661eae8cca951f6" title="Selects a move for the AI." alt="" coords="210,39,345,81"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="107,155,226,87,224,92,110,159"/>
+<area shape="rect" id="Node000005" href="$class_player.html#af56f0bf98c0423a3a75b0848607d03a4" title=" " alt="" coords="395,101,528,144"/>
+<area shape="poly" id="edge6_Node000001_Node000005" title=" " alt="" coords="146,154,209,143,382,126,378,129,210,148,148,159"/>
+<area shape="rect" id="Node000006" href="$class_player.html#a2df3bd299bf7aecfa2275ec6902a60f8" title="Get player type (e.g., &#39;H&#39; or &#39;C&#39;)." alt="" coords="219,157,336,184"/>
+<area shape="poly" id="edge7_Node000001_Node000006" title=" " alt="" coords="161,168,206,170,201,172,163,173"/>
+<area shape="rect" id="Node000007" href="$class_ultimate___u_i.html#ab5ffeb8c1e38fd4168af7b3d8e5b3b4a" title=" " alt="" coords="215,208,340,251"/>
+<area shape="poly" id="edge8_Node000001_Node000007" title=" " alt="" coords="130,182,203,205,198,207,130,187"/>
+<area shape="rect" id="Node000008" href="$class_ultimate___u_i.html#a05a1f1b321a326c8cff8ee7e8628c328" title=" " alt="" coords="214,275,340,317"/>
+<area shape="poly" id="edge9_Node000001_Node000008" title=" " alt="" coords="102,182,151,219,211,260,219,267,214,266,208,265,148,223,101,187"/>
+<area shape="rect" id="Node000003" href="$class_ultimate___board.html#a58c58adde2870daa6f666429b529c671" title="Gets empty cells in a specific sub&#45;board." alt="" coords="578,5,716,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="333,36,393,20,481,13,566,17,561,19,481,18,393,25,335,41"/>
+<area shape="rect" id="Node000004" href="$class_ultimate___board.html#ab835b470575b77f6eb6b7930291dc986" title="Gets all allowed moves based on current state and forced board." alt="" coords="393,35,530,77"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="345,56,380,57,375,59,346,61"/>
+<area shape="poly" id="edge5_Node000002_Node000005" title=" " alt="" coords="342,79,385,95,380,96,342,85"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="530,43,565,39,560,41,531,48"/>
+</map>

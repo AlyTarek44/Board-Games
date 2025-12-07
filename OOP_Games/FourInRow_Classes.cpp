@@ -1,3 +1,8 @@
+/**
+ * @file FourInRow_Classes.cpp
+ * @brief Implementation of the Four-in-a-Row game logic and AI.
+ */
+
 #include "FourInRow_Classes.h"
 #include <iostream>
 #include <cstdlib>
@@ -8,6 +13,13 @@
 
 using namespace std;
 
+// --------------------------------------------------------------------
+// FourInRow_Board Implementation
+// --------------------------------------------------------------------
+
+/**
+ * @brief Initializes a 6-row by 7-column board with blank symbols.
+ */
 FourInRow_Board::FourInRow_Board() : Board(6, 7) {
     for (auto& row : board) {
         for (auto& cell : row) {
@@ -16,6 +28,11 @@ FourInRow_Board::FourInRow_Board() : Board(6, 7) {
     }
 }
 
+/**
+ * @brief Applies a move using gravity logic.
+ *
+ * Finds the bottom-most empty row in the specified column and places the symbol there.
+ */
 bool FourInRow_Board::update_board(Move<char>* move) {
     int col = move->get_y();
     char symbol = move->get_symbol();
@@ -30,6 +47,9 @@ bool FourInRow_Board::update_board(Move<char>* move) {
     return true;
 }
 
+/**
+ * @brief Scans a column from bottom to top to find the first empty slot.
+ */
 int FourInRow_Board::get_next_empty_row(int col) {
     for (int row = rows - 1; row >= 0; row--) {
         if (board[row][col] == blank_symbol) {
@@ -51,8 +71,11 @@ bool FourInRow_Board::check_direction(int row, int col, int delta_row, int delta
     return count == 4;
 }
 
+/**
+ * @brief Checks all 4 axes (horizontal, vertical, two diagonals) for a win.
+ */
 bool FourInRow_Board::check_win_condition(int row, int col, char symbol) {
-    // Horizontal, Vertical, Diagonal 1, Diagonal 2
+    // Horizontal, Vertical, Diagonal 1 (Positive slope), Diagonal 2 (Negative slope)
     for (int c = max(0, col - 3); c <= min(columns - 4, col); c++)
         if (check_direction(row, c, 0, 1, symbol)) return true;
     for (int r = max(0, row - 3); r <= min(rows - 4, row); r++)
@@ -80,15 +103,21 @@ bool FourInRow_Board::is_win(Player<char>* player) {
 }
 
 bool FourInRow_Board::is_lose(Player<char>* player) { return false; }
+
 bool FourInRow_Board::is_draw(Player<char>* player) { return n_moves == rows * columns; }
+
 bool FourInRow_Board::game_is_over(Player<char>* player) { return is_win(player) || is_draw(player); }
 
 bool FourInRow_Board::is_valid_move(int col) {
     return col >= 0 && col < columns && board[0][col] == blank_symbol;
 }
 
+/**
+ * @brief Prioritizes center columns for move ordering (heuristic optimization).
+ */
 vector<int> FourInRow_Board::get_valid_moves() {
     vector<int> moves;
+    // Search order: center columns first [3, 2, 4, 1, 5, 0, 6] to improve Alpha-Beta pruning
     int order[] = {3, 2, 4, 1, 5, 0, 6};
     for(int col : order) {
         if(is_valid_move(col)) moves.push_back(col);
@@ -96,7 +125,10 @@ vector<int> FourInRow_Board::get_valid_moves() {
     return moves;
 }
 
-
+/**
+ * @brief Heuristic scoring for a specific 4-cell window.
+ * Points are awarded for connected pieces and deducted for opponent threats.
+ */
 int FourInRow_Board::evaluate_window(const vector<char>& window, char piece) {
     int score = 0;
     char opp_piece = (piece == 'X') ? 'O' : 'X';
@@ -114,11 +146,15 @@ int FourInRow_Board::evaluate_window(const vector<char>& window, char piece) {
     else if (piece_count == 3 && empty_count == 1) score += 5;
     else if (piece_count == 2 && empty_count == 2) score += 2;
 
-    if (opp_count == 3 && empty_count == 1) score -= 4; // Block opponent!
+    if (opp_count == 3 && empty_count == 1) score -= 4; // Penalize if opponent is about to win
 
     return score;
 }
 
+/**
+ * @brief Evaluates the entire board state for the AI.
+ * Factors: Center column control, horizontal/vertical/diagonal connections.
+ */
 int FourInRow_Board::score_position(char piece) {
     int score = 0;
 
@@ -133,31 +169,29 @@ int FourInRow_Board::score_position(char piece) {
     }
     score += center_count * 3;
 
-    // 2. Horizontal Windows
+    // 2. Evaluate all windows
+    // Horizontal
     for (int r = 0; r < rows; r++) {
         for (int c = 0; c < columns - 3; c++) {
             vector<char> window = {board[r][c], board[r][c+1], board[r][c+2], board[r][c+3]};
             score += evaluate_window(window, piece);
         }
     }
-
-    // 3. Vertical Windows
+    // Vertical
     for (int c = 0; c < columns; c++) {
         for (int r = 0; r < rows - 3; r++) {
             vector<char> window = {board[r][c], board[r+1][c], board[r+2][c], board[r+3][c]};
             score += evaluate_window(window, piece);
         }
     }
-
-    // 4. Diagonal Windows (Positive slope)
+    // Diagonal (Positive)
     for (int r = 0; r < rows - 3; r++) {
         for (int c = 0; c < columns - 3; c++) {
             vector<char> window = {board[r][c], board[r+1][c+1], board[r+2][c+2], board[r+3][c+3]};
             score += evaluate_window(window, piece);
         }
     }
-
-    // 5. Diagonal Windows (Negative slope)
+    // Diagonal (Negative)
     for (int r = 0; r < rows - 3; r++) {
         for (int c = 0; c < columns - 3; c++) {
             vector<char> window = {board[r+3][c], board[r+2][c+1], board[r+1][c+2], board[r][c+3]};
@@ -168,12 +202,15 @@ int FourInRow_Board::score_position(char piece) {
     return score;
 }
 
+/**
+ * @brief Minimax Algorithm implementation with Alpha-Beta Pruning.
+ */
 int FourInRow_Board::minimax(int depth, int alpha, int beta, bool maximizingPlayer, char ai_symbol) {
     char opp_symbol = (ai_symbol == 'X') ? 'O' : 'X';
 
-
+    // Create temporary player objects for win checking
     Player<char> ai_p("AI", ai_symbol, PlayerType::AI);
-    Player<char> opp_p("Opp", opp_symbol, PlayerType::AI); // Temp player for check
+    Player<char> opp_p("Opp", opp_symbol, PlayerType::AI);
 
     if (is_win(&ai_p)) return 1000000;
     if (is_win(&opp_p)) return -1000000;
@@ -187,7 +224,7 @@ int FourInRow_Board::minimax(int depth, int alpha, int beta, bool maximizingPlay
         for (int col : valid_moves) {
             int row = get_next_empty_row(col);
 
-            // Make Move
+            // Simulate Move
             board[row][col] = ai_symbol;
             n_moves++;
 
@@ -208,7 +245,7 @@ int FourInRow_Board::minimax(int depth, int alpha, int beta, bool maximizingPlay
         for (int col : valid_moves) {
             int row = get_next_empty_row(col);
 
-            // Make Move
+            // Simulate Move
             board[row][col] = opp_symbol;
             n_moves++;
 
@@ -227,7 +264,7 @@ int FourInRow_Board::minimax(int depth, int alpha, int beta, bool maximizingPlay
 }
 
 int FourInRow_Board::get_best_move(char ai_symbol) {
-    int depth = 5;
+    int depth = 5; // Search depth
 
     vector<int> valid_moves = get_valid_moves();
     int bestVal = -2000000000;
@@ -253,6 +290,9 @@ int FourInRow_Board::get_best_move(char ai_symbol) {
     return bestMove;
 }
 
+// --------------------------------------------------------------------
+// FourInRow_UI Implementation
+// --------------------------------------------------------------------
 
 FourInRow_UI::FourInRow_UI(FourInRow_Board* board) :
     UI<char>("Welcome to Four-in-a-Row Game! Connect four to win.", 3), board_ptr(board) {

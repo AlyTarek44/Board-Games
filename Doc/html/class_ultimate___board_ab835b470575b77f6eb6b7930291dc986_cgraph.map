@@ -1,0 +1,5 @@
+<map id="Ultimate_Board::get_allowed_moves" name="Ultimate_Board::get_allowed_moves">
+<area shape="rect" id="Node000001" title="Gets all allowed moves based on current state and forced board." alt="" coords="5,5,143,48"/>
+<area shape="rect" id="Node000002" href="$class_ultimate___board.html#a58c58adde2870daa6f666429b529c671" title="Gets empty cells in a specific sub&#45;board." alt="" coords="191,5,328,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="143,24,178,26,172,27,143,29"/>
+</map>

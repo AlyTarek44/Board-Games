@@ -1,0 +1,5 @@
+<map id="Ultimate_AIPlayer" name="Ultimate_AIPlayer">
+<area shape="rect" id="Node000001" title="AI Player for Ultimate Tic&#45;Tac&#45;Toe." alt="" coords="5,315,151,427"/>
+<area shape="rect" id="Node000002" href="$class_player.html" title=" " alt="" coords="23,5,134,267"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="79,279,81,316,76,315,77,284"/>
+</map>

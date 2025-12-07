@@ -1,0 +1,9 @@
+<map id="FourInRow_UI::setup_players" name="FourInRow_UI::setup_players">
+<area shape="rect" id="Node000001" title="Sets up the two players." alt="" coords="5,64,152,107"/>
+<area shape="rect" id="Node000002" href="$class_four_in_row___u_i.html#aa09a5ccc815f80282545e1875805d7e1" title="Creates a player (Human or Computer)." alt="" coords="220,5,370,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="151,63,207,50,203,52,153,68"/>
+<area shape="rect" id="Node000003" href="$class_u_i.html#a7b1603de1f73fbb4006e4f00a27c44da" title=" " alt="" coords="200,72,391,99"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="151,83,186,85,181,86,152,88"/>
+<area shape="rect" id="Node000004" href="$class_u_i.html#ac3d45fea2bbcaa0372d8e5101e116ca1" title=" " alt="" coords="219,123,372,165"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="152,102,207,119,202,120,152,108"/>
+</map>

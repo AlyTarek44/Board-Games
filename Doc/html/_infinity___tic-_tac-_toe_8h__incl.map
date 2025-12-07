@@ -1,0 +1,18 @@
+<map id="Infinity_Tic&#45;Tac&#45;Toe.h" name="Infinity_Tic&#45;Tac&#45;Toe.h">
+<area shape="rect" id="Node000001" title="Header file for Infinity Tic&#45;Tac&#45;Toe." alt="" coords="128,5,274,32"/>
+<area shape="rect" id="Node000002" href="$_board_game___classes_8h.html" title=" " alt="" coords="78,155,234,181"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="179,34,158,54,138,81,135,95,135,111,144,141,139,140,130,111,130,95,134,79,154,51,182,30"/>
+<area shape="rect" id="Node000007" href="$_x_o___classes_8h.html" title="Defines the X&#45;O (Tic&#45;Tac&#45;Toe) specific classes that extend the generic board game framework." alt="" coords="148,80,254,107"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="202,30,204,65,199,64,200,35"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="278,80,335,107"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="220,30,278,70,273,71,219,35"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,229,59,256"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="136,184,68,224,65,219,133,180"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="83,229,141,256"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="151,181,129,218,126,214,146,183"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="164,229,236,256"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="165,180,187,216,182,216,162,184"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="260,229,326,256"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="181,179,258,221,253,222,179,184"/>
+<area shape="poly" id="edge7_Node000007_Node000002" title=" " alt="" coords="195,105,174,143,170,140,191,109"/>
+</map>

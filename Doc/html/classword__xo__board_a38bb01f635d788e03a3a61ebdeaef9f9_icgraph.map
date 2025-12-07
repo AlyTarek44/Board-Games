@@ -1,0 +1,5 @@
+<map id="word_xo_board::simulate_move" name="word_xo_board::simulate_move">
+<area shape="rect" id="Node000001" title=" " alt="" coords="192,13,397,40"/>
+<area shape="rect" id="Node000002" href="$classword__xo__board.html#ab890227dc9263fbaabc3325d5a7e3f02" title="Finds the best move for AI. Tries to find a winning move, or block an opponent&#39;s winning move." alt="" coords="5,5,144,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="174,27,144,29,144,24,179,26"/>
+</map>

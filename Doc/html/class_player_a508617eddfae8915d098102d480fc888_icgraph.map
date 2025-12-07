@@ -1,0 +1,7 @@
+<map id="Player::get_board_ptr" name="Player::get_board_ptr">
+<area shape="rect" id="Node000001" title="Get a pointer to the game board." alt="" coords="204,31,349,57"/>
+<area shape="rect" id="Node000002" href="$class_fx_f_t_t_t__ui.html#af27b7f5701d74a27e7cf4227f3709884" title="Gets move from player." alt="" coords="5,5,156,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="185,33,156,31,156,26,191,32"/>
+<area shape="rect" id="Node000003" href="$class_x_o___u_i.html#a4814913b14a2666667a2a90ab8205356" title="Retrieves the next move from a player." alt="" coords="17,56,144,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="185,56,145,64,144,58,191,55"/>
+</map>

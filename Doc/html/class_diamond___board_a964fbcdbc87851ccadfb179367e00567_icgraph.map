@@ -1,0 +1,5 @@
+<map id="Diamond_Board::is_draw" name="Diamond_Board::is_draw">
+<area shape="rect" id="Node000001" title="Checks if game is a draw." alt="" coords="208,13,375,40"/>
+<area shape="rect" id="Node000002" href="$class_diamond___board.html#a32a49c7b0dd091616f52e1ea9152d8ac" title="Checks if game is over." alt="" coords="5,5,160,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="189,27,160,29,160,24,195,26"/>
+</map>

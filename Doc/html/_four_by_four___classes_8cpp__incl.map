@@ -1,0 +1,24 @@
+<map id="FourByFour_Classes.cpp" name="FourByFour_Classes.cpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="396,5,565,32"/>
+<area shape="rect" id="Node000002" href="$_four_by_four___classes_8h.html" title="Header for 4x4 Tic&#45;Tac&#45;Toe variant." alt="" coords="179,80,334,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="439,34,311,77,309,72,444,31"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="445,229,516,256"/>
+<area shape="poly" id="edge11_Node000001_Node000006" title=" " alt="" coords="483,31,483,215,478,213,479,34"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="518,80,577,107"/>
+<area shape="poly" id="edge12_Node000001_Node000010" title=" " alt="" coords="493,30,528,69,523,68,492,35"/>
+<area shape="rect" id="Node000003" href="$_board_game___classes_8h.html" title=" " alt="" coords="236,155,392,181"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="268,105,297,143,292,142,266,110"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="367,229,421,256"/>
+<area shape="poly" id="edge8_Node000002_Node000004" title=" " alt="" coords="333,105,374,123,392,136,407,153,413,168,415,185,408,217,404,213,409,184,408,170,402,156,389,140,371,127,332,110"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="183,229,240,256"/>
+<area shape="poly" id="edge7_Node000002_Node000005" title=" " alt="" coords="250,105,237,130,226,156,219,186,215,216,210,212,213,185,221,154,233,127,246,109"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="5,155,63,181"/>
+<area shape="poly" id="edge9_Node000002_Node000008" title=" " alt="" coords="217,110,79,155,77,150,218,105"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="86,155,160,181"/>
+<area shape="poly" id="edge10_Node000002_Node000009" title=" " alt="" coords="231,109,161,149,158,145,236,106"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="329,179,372,219,367,219,327,184"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="299,181,243,222,241,217,294,183"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="344,179,440,223,435,223,342,184"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="277,229,343,256"/>
+<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="315,180,314,215,309,212,311,184"/>
+</map>

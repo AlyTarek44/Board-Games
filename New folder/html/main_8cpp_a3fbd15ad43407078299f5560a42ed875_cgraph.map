@@ -1,0 +1,9 @@
+<map id="run_FourInRow" name="run_FourInRow">
+<area shape="rect" id="Node000001" title="Runs the Four&#45;in&#45;a&#45;Row game." alt="" coords="5,35,116,61"/>
+<area shape="rect" id="Node000002" href="$class_game_manager.html#a71f46d5189dac5c773f608cea1b5a203" title="Run the main game loop until someone wins or the game ends." alt="" coords="171,5,303,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="116,36,158,31,153,33,117,41"/>
+<area shape="rect" id="Node000004" href="$class_four_in_row___u_i.html#abe7486ed4e7ca4a3306b25d3c7fcb419" title="Sets up the two players." alt="" coords="164,56,310,99"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="116,55,151,62,146,63,116,60"/>
+<area shape="rect" id="Node000003" href="$class_player.html#aed2af19790ba73190e3ebeea589518e1" title="Get the player&#39;s name." alt="" coords="358,5,481,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="303,16,345,18,340,19,303,21"/>
+</map>

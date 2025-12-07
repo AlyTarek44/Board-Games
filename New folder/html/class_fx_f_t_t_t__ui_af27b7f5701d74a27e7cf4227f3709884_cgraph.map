@@ -1,0 +1,25 @@
+<map id="FxFTTT_ui::get_move" name="FxFTTT_ui::get_move">
+<area shape="rect" id="Node000001" title="Gets move from player." alt="" coords="5,197,156,224"/>
+<area shape="rect" id="Node000002" href="$class_fx_f_t_t_t__board.html#a1bf48771f60f30abf0d954790a6bb337" title="Finds the best move for the AI." alt="" coords="208,105,344,148"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="112,194,212,153,209,157,115,199"/>
+<area shape="rect" id="Node000008" href="$class_player.html#a508617eddfae8915d098102d480fc888" title="Get a pointer to the game board." alt="" coords="204,172,349,199"/>
+<area shape="poly" id="edge11_Node000001_Node000008" title=" " alt="" coords="155,198,191,196,186,198,157,203"/>
+<area shape="rect" id="Node000009" href="$class_player.html#af56f0bf98c0423a3a75b0848607d03a4" title="Get the player&#39;s symbol." alt="" coords="210,223,343,249"/>
+<area shape="poly" id="edge12_Node000001_Node000009" title=" " alt="" coords="156,218,197,225,192,226,156,223"/>
+<area shape="rect" id="Node000010" href="$class_player.html#a2df3bd299bf7aecfa2275ec6902a60f8" title="Get player type (e.g., &#39;H&#39; or &#39;C&#39;)." alt="" coords="218,273,334,300"/>
+<area shape="poly" id="edge13_Node000001_Node000010" title=" " alt="" coords="114,222,205,259,223,268,218,267,203,264,113,227"/>
+<area shape="rect" id="Node000003" href="$class_fx_f_t_t_t__board.html#a8a9a1288b7b780f8db0770393a5522b0" title="Gets all available empty spots." alt="" coords="615,5,807,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="303,103,345,74,396,49,447,36,500,27,602,22,597,24,500,32,448,41,398,55,348,78,306,107"/>
+<area shape="rect" id="Node000004" href="$class_fx_f_t_t_t__board.html#a0a3896a2fedb7ff5499a3d7f1884ab1c" title="Minimax algorithm for 5x5 board optimization." alt="" coords="397,88,561,115"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="344,116,384,113,379,114,346,121"/>
+<area shape="rect" id="Node000006" href="$class_fx_f_t_t_t__board.html#ac75d8934eb3b971fc982bfeb14bbda4a" title="Simulates a move for AI calculation." alt="" coords="609,139,813,165"/>
+<area shape="poly" id="edge9_Node000002_Node000006" title=" " alt="" coords="345,128,596,144,592,147,345,133"/>
+<area shape="rect" id="Node000007" href="$class_fx_f_t_t_t__board.html#a289c499849632502665714a96e774836" title="Undoes a simulated move." alt="" coords="620,189,802,216"/>
+<area shape="poly" id="edge10_Node000002_Node000007" title=" " alt="" coords="344,136,397,145,617,185,612,187,397,151,345,141"/>
+<area shape="poly" id="edge5_Node000004_Node000003" title=" " alt="" coords="522,85,631,52,626,54,524,90"/>
+<area shape="poly" id="edge6_Node000004_Node000004" title=" " alt="" coords="444,87,439,79,443,70,457,63,479,61,503,64,518,73,512,73,502,69,479,67,458,69,447,73,444,79,450,88"/>
+<area shape="rect" id="Node000005" href="$class_fx_f_t_t_t__board.html#a9193085e8b7ab970d31de65a272a62e3" title="Evaluates the current board state." alt="" coords="629,72,793,115"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="561,96,616,96,611,97,562,101"/>
+<area shape="poly" id="edge7_Node000004_Node000006" title=" " alt="" coords="544,113,635,135,629,135,544,118"/>
+<area shape="poly" id="edge8_Node000004_Node000007" title=" " alt="" coords="501,113,550,144,610,175,631,184,626,184,608,180,547,149,500,118"/>
+</map>

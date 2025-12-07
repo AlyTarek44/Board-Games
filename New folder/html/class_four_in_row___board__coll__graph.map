@@ -1,0 +1,5 @@
+<map id="FourInRow_Board" name="FourInRow_Board">
+<area shape="rect" id="Node000001" title="Represents the 6x7 board for the Four&#45;in&#45;a&#45;Row game." alt="" coords="5,421,142,661"/>
+<area shape="rect" id="Node000002" href="$class_board.html" title=" " alt="" coords="8,5,140,373"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="74,385,76,422,71,421,73,391"/>
+</map>

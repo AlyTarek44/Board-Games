@@ -1,0 +1,5 @@
+<map id="Pyramid_Board::get_valid_moves" name="Pyramid_Board::get_valid_moves">
+<area shape="rect" id="Node000001" title="Returns a list of all valid empty cells (used by AI)." alt="" coords="5,5,142,48"/>
+<area shape="rect" id="Node000002" href="$class_pyramid___board.html#abffbb8c10e4b26fd2188cd97ab166a43" title="Checks if a matrix coordinate corresponds to a valid pyramid cell." alt="" coords="190,5,352,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="142,24,177,26,171,27,142,29"/>
+</map>

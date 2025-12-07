@@ -1,0 +1,5 @@
+<map id="word_xo_board::is_draw" name="word_xo_board::is_draw">
+<area shape="rect" id="Node000001" title="Checks for draw (full board, no words)." alt="" coords="5,5,168,32"/>
+<area shape="rect" id="Node000002" href="$classword__xo__board.html#a86ea252e6e066266cdf2c38272283c1f" title="Checks if any line on the board forms a valid word." alt="" coords="216,5,412,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="168,16,203,19,197,19,168,21"/>
+</map>

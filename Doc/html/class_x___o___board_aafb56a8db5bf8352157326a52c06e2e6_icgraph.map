@@ -1,0 +1,10 @@
+<map id="X_O_Board::is_win" name="X_O_Board::is_win">
+<area shape="rect" id="Node000001" title="Checks if the given player has won the game." alt="" coords="429,23,562,49"/>
+<area shape="rect" id="Node000002" href="$class_x___o___board.html#aaee6e3efcbd685d9792d6d81356bba45" title="Determines if the game is over (win or draw)." alt="" coords="5,23,183,49"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="426,19,381,13,306,8,231,13,157,25,156,19,230,8,306,3,381,8,432,19"/>
+<area shape="rect" id="Node000003" href="$classinf__xo___board.html#a220be5b504cbf0247b3a719d9d4e596e" title="Checks for a draw condition (rare in this variant)." alt="" coords="231,23,381,49"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="410,36,382,39,381,33,416,36"/>
+<area shape="rect" id="Node000004" href="$class_x___o___board.html#a2be5f37643e21edbdea2361853a6e953" title="Checks if the game has ended in a draw." alt="" coords="235,73,376,100"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="431,53,359,75,358,70,425,54"/>
+<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="229,70,153,52,153,47,235,68"/>
+</map>

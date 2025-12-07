@@ -1,0 +1,11 @@
+<map id="FxFTTT_board::simulate_move" name="FxFTTT_board::simulate_move">
+<area shape="rect" id="Node000001" title="Simulates a move for AI calculation." alt="" coords="600,13,804,40"/>
+<area shape="rect" id="Node000002" href="$class_fx_f_t_t_t__board.html#a1bf48771f60f30abf0d954790a6bb337" title="Finds the best move for the AI." alt="" coords="204,5,340,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="582,16,552,17,470,15,388,17,341,21,340,16,388,12,470,9,552,12,588,16"/>
+<area shape="rect" id="Node000004" href="$class_fx_f_t_t_t__board.html#a0a3896a2fedb7ff5499a3d7f1884ab1c" title="Minimax algorithm for 5x5 board optimization." alt="" coords="388,51,552,77"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="603,43,553,53,552,48,598,43"/>
+<area shape="rect" id="Node000003" href="$class_fx_f_t_t_t__ui.html#af27b7f5701d74a27e7cf4227f3709884" title="Gets move from player." alt="" coords="5,13,156,40"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="186,27,156,29,155,24,191,26"/>
+<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="379,47,340,42,340,37,384,47"/>
+<area shape="poly" id="edge5_Node000004_Node000004" title=" " alt="" coords="503,35,492,32,470,29,449,31,438,36,436,41,441,51,436,49,430,42,435,32,448,26,470,24,494,27,508,36"/>
+</map>

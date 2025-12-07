@@ -1,0 +1,15 @@
+<map id="Pyramid_Board::is_valid_position" name="Pyramid_Board::is_valid_position">
+<area shape="rect" id="Node000001" title="Checks if a matrix coordinate corresponds to a valid pyramid cell." alt="" coords="619,72,782,115"/>
+<area shape="rect" id="Node000002" href="$class_pyramid___board.html#a9ad1c34b1a853b635749d9ffc99382c1" title="Returns a list of all valid empty cells (used by AI)." alt="" coords="420,5,556,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="614,67,557,51,557,45,619,67"/>
+<area shape="rect" id="Node000005" href="$class_pyramid___board.html#abb3758893582e50e90642aea896c59b4" title="Constructor. Initializes the pyramid shape." alt="" coords="405,72,571,115"/>
+<area shape="poly" id="edge6_Node000001_Node000005" title=" " alt="" coords="601,94,572,96,572,91,606,93"/>
+<area shape="rect" id="Node000006" href="$class_pyramid___board.html#aa0ad0f91ee884d0a497e233ce4f68c65" title="Updates the board with a player&#39;s move." alt="" coords="410,139,567,181"/>
+<area shape="poly" id="edge7_Node000001_Node000006" title=" " alt="" coords="619,119,559,141,558,135,614,120"/>
+<area shape="rect" id="Node000003" href="$class_pyramid___board.html#af430ff09c33d83678fe311c38f2e0e47" title="Computes the best move for the AI using Minimax." alt="" coords="5,5,142,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="402,19,357,17,273,15,190,17,143,21,141,16,190,12,273,9,357,12,407,17"/>
+<area shape="rect" id="Node000004" href="$class_pyramid___board.html#aff6d7fcb1a2b45fb496bbd3c53053655" title="The Minimax recursive algorithm." alt="" coords="190,51,357,77"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="402,42,355,53,353,47,407,40"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="181,48,142,42,141,37,186,46"/>
+<area shape="poly" id="edge5_Node000004_Node000004" title=" " alt="" coords="306,35,296,32,273,29,252,31,241,36,239,41,244,51,239,50,233,42,237,32,251,26,273,24,297,27,311,35"/>
+</map>

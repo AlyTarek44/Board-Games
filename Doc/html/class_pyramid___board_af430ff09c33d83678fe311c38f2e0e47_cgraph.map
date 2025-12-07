@@ -1,0 +1,13 @@
+<map id="Pyramid_Board::get_best_move" name="Pyramid_Board::get_best_move">
+<area shape="rect" id="Node000001" title="Computes the best move for the AI using Minimax." alt="" coords="5,39,142,81"/>
+<area shape="rect" id="Node000002" href="$class_pyramid___board.html#a9ad1c34b1a853b635749d9ffc99382c1" title="Returns a list of all valid empty cells (used by AI)." alt="" coords="414,5,550,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="142,50,189,45,400,30,397,34,190,51,143,55"/>
+<area shape="rect" id="Node000004" href="$class_pyramid___board.html#aff6d7fcb1a2b45fb496bbd3c53053655" title="The Minimax recursive algorithm." alt="" coords="190,84,357,111"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="142,70,186,80,181,81,142,75"/>
+<area shape="rect" id="Node000003" href="$class_pyramid___board.html#abffbb8c10e4b26fd2188cd97ab166a43" title="Checks if a matrix coordinate corresponds to a valid pyramid cell." alt="" coords="606,5,769,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="550,24,593,26,588,27,550,29"/>
+<area shape="poly" id="edge5_Node000004_Node000002" title=" " alt="" coords="315,81,400,54,405,53,316,86"/>
+<area shape="poly" id="edge6_Node000004_Node000004" title=" " alt="" coords="239,83,233,75,237,66,251,59,273,57,297,60,311,69,306,68,296,65,273,63,252,65,241,69,239,75,244,85"/>
+<area shape="rect" id="Node000005" href="$class_pyramid___board.html#abe908e2f05bee4ba53b8353f097fa843" title="Checks if a specific symbol has won. Useful for checking hypothetical states in Minimax." alt="" coords="405,76,558,119"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="357,95,392,97,387,97,357,100"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="Diamond_AIPlayer" name="Diamond_AIPlayer">
+<area shape="rect" id="Node000001" title="AI player using backtracking/minimax with memoization." alt="" coords="5,735,154,847"/>
+<area shape="rect" id="Node000002" href="$class_player.html" title=" " alt="" coords="24,445,135,685"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="81,698,82,736,77,735,79,703"/>
+<area shape="rect" id="Node000003" href="$class_board.html" title=" " alt="" coords="14,5,146,373"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="80,370,82,429,77,428,80,376"/>
+</map>

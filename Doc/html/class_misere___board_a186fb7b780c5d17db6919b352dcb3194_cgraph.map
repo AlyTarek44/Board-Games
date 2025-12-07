@@ -1,0 +1,7 @@
+<map id="Misere_Board::is_lose" name="Misere_Board::is_lose">
+<area shape="rect" id="Node000001" title="Checks if player has lost (i.e., successfully made 3&#45;in&#45;a&#45;row)." alt="" coords="5,35,156,61"/>
+<area shape="rect" id="Node000002" href="$class_player.html#af56f0bf98c0423a3a75b0848607d03a4" title="Get the player&#39;s symbol." alt="" coords="209,5,342,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="156,34,197,30,191,32,157,39"/>
+<area shape="rect" id="Node000003" href="$class_misere___board.html#a0728b0025a1cafb4aac063e86ea6bd32" title=" " alt="" coords="204,56,348,99"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="156,57,191,64,186,64,156,62"/>
+</map>

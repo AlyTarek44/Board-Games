@@ -1,0 +1,19 @@
+<map id="OOP_Games/FourByFour_Classes.h" name="OOP_Games/FourByFour_Classes.h">
+<area shape="rect" id="Node000001" title="Header for 4x4 Tic&#45;Tac&#45;Toe variant." alt="" coords="113,5,284,48"/>
+<area shape="rect" id="Node000002" href="$_board_game___classes_8h.html" title=" " alt="" coords="120,96,277,123"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="200,46,201,81,196,79,197,51"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,171,59,197"/>
+<area shape="poly" id="edge7_Node000001_Node000003" title=" " alt="" coords="159,50,130,72,98,98,71,129,49,159,45,156,67,125,94,94,127,68,163,47"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="83,171,141,197"/>
+<area shape="poly" id="edge6_Node000001_Node000004" title=" " alt="" coords="154,50,131,71,110,97,104,126,107,156,102,155,99,126,106,95,127,67,158,47"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="301,96,358,123"/>
+<area shape="poly" id="edge8_Node000001_Node000007" title=" " alt="" coords="233,46,299,87,294,88,232,51"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="382,96,456,123"/>
+<area shape="poly" id="edge9_Node000001_Node000008" title=" " alt="" coords="256,46,372,89,367,91,255,51"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="171,126,74,167,72,163,169,121"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="186,122,140,163,137,158,181,124"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="164,171,236,197"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="201,121,202,156,197,154,197,125"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="260,171,326,197"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="216,121,268,161,262,161,214,126"/>
+</map>

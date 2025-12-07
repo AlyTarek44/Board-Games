@@ -1,0 +1,11 @@
+<map id="Diamond_Board::valid_cell" name="Diamond_Board::valid_cell">
+<area shape="rect" id="Node000001" title="Checks if a coordinate is within the diamond shape." alt="" coords="228,113,404,140"/>
+<area shape="rect" id="Node000002" href="$class_diamond___board.html#a46b141be4a62a22373d34ef04c9c536a" title="Constructor for Diamond Board." alt="" coords="5,5,180,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="272,107,179,62,153,51,152,46,181,58,277,105"/>
+<area shape="rect" id="Node000003" href="$class_diamond___board.html#ac831d89ffd7e1eeb4bbb4f6df85e5d2e" title=" " alt="" coords="15,72,170,115"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="210,112,170,107,170,102,215,110"/>
+<area shape="rect" id="Node000004" href="$class_diamond___board.html#affeff77dbfdc17fdd33166c11ee5ad15" title=" " alt="" coords="17,139,168,181"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="210,143,169,151,168,146,215,141"/>
+<area shape="rect" id="Node000005" href="$class_diamond___board.html#ace093fe213c029551400df9cc4d53196" title="Updates board with player move." alt="" coords="12,205,173,248"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="277,147,181,196,153,207,151,202,179,191,272,148"/>
+</map>

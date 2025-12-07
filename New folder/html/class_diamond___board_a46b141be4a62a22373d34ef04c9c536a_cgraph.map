@@ -1,0 +1,7 @@
+<map id="Diamond_Board::Diamond_Board" name="Diamond_Board::Diamond_Board">
+<area shape="rect" id="Node000001" title="Constructor for Diamond Board." alt="" coords="5,23,180,65"/>
+<area shape="rect" id="Node000002" href="$class_board.html#ae5dfded241ee3644196e2f6074d1d0b1" title=" " alt="" coords="243,5,389,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="179,32,229,28,224,29,180,37"/>
+<area shape="rect" id="Node000003" href="$class_diamond___board.html#a2d59e385450ce16357cbc16e92a2aa65" title="Checks if a coordinate is within the diamond shape." alt="" coords="228,56,404,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="180,51,215,57,209,58,180,57"/>
+</map>

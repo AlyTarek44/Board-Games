@@ -1,0 +1,10 @@
+<map id="FxFTTT_board::evaluate_board" name="FxFTTT_board::evaluate_board">
+<area shape="rect" id="Node000001" title="Evaluates the current board state." alt="" coords="600,21,765,64"/>
+<area shape="rect" id="Node000002" href="$class_fx_f_t_t_t__board.html#a0a3896a2fedb7ff5499a3d7f1884ab1c" title="Minimax algorithm for 5x5 board optimization." alt="" coords="388,29,552,56"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="582,43,553,45,553,40,588,43"/>
+<area shape="poly" id="edge4_Node000002_Node000002" title=" " alt="" coords="503,14,492,10,470,8,449,10,438,15,436,20,441,30,436,28,430,21,435,11,448,5,470,3,494,5,508,15"/>
+<area shape="rect" id="Node000003" href="$class_fx_f_t_t_t__board.html#a1bf48771f60f30abf0d954790a6bb337" title="Finds the best move for the AI." alt="" coords="204,21,340,64"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="370,43,340,45,340,40,375,43"/>
+<area shape="rect" id="Node000004" href="$class_fx_f_t_t_t__ui.html#af27b7f5701d74a27e7cf4227f3709884" title="Gets move from player." alt="" coords="5,29,156,56"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="186,43,156,45,156,40,191,42"/>
+</map>

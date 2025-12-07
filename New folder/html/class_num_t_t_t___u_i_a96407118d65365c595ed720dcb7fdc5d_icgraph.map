@@ -1,0 +1,5 @@
+<map id="NumTTT_UI::create_player" name="NumTTT_UI::create_player">
+<area shape="rect" id="Node000001" title="Creates a player for Numerical TTT." alt="" coords="237,5,417,32"/>
+<area shape="rect" id="Node000002" href="$class_num_t_t_t___u_i.html#a414ad20c2c7363dbf8beaa0d4cef40ad" title="Setup players." alt="" coords="5,5,189,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="219,19,189,21,189,16,224,19"/>
+</map>

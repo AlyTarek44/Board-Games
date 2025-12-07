@@ -1,0 +1,12 @@
+<map id="Misere_Board::game_is_over" name="Misere_Board::game_is_over">
+<area shape="rect" id="Node000001" title="Checks if game is over." alt="" coords="5,31,147,73"/>
+<area shape="rect" id="Node000002" href="$class_misere___board.html#aab74b353342b36b268bd2c46f5c788f9" title="Checks for draw." alt="" coords="195,13,349,40"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="146,40,182,38,177,39,148,45"/>
+<area shape="rect" id="Node000004" href="$class_misere___board.html#a186fb7b780c5d17db6919b352dcb3194" title="Checks if player has lost (i.e., successfully made 3&#45;in&#45;a&#45;row)." alt="" coords="197,64,347,91"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="147,58,184,65,179,66,147,64"/>
+<area shape="rect" id="Node000003" href="$class_misere___board.html#a0728b0025a1cafb4aac063e86ea6bd32" title=" " alt="" coords="397,5,541,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="349,24,384,26,379,27,350,29"/>
+<area shape="poly" id="edge5_Node000004_Node000003" title=" " alt="" coords="326,61,379,50,384,49,327,66"/>
+<area shape="rect" id="Node000005" href="$class_player.html#af56f0bf98c0423a3a75b0848607d03a4" title="Get the player&#39;s symbol." alt="" coords="402,72,536,99"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="347,78,390,82,384,82,347,83"/>
+</map>

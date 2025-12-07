@@ -1,0 +1,5 @@
+<map id="FourInRow_Board::is_win" name="FourInRow_Board::is_win">
+<area shape="rect" id="Node000001" title="Checks if the player has won." alt="" coords="220,13,391,40"/>
+<area shape="rect" id="Node000002" href="$class_four_in_row___board.html#ae1e3a41a3f3d3582afc7cfdfedafe240" title="Checks if the game is over (Win or Draw)." alt="" coords="5,5,172,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="202,27,172,29,172,24,207,26"/>
+</map>

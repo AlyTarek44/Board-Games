@@ -1,0 +1,5 @@
+<map id="FxFTTT_board::is_draw" name="FxFTTT_board::is_draw">
+<area shape="rect" id="Node000001" title="Checks if game is a draw (equal 3&#45;in&#45;a&#45;rows)." alt="" coords="5,13,166,40"/>
+<area shape="rect" id="Node000002" href="$class_fx_f_t_t_t__board.html#a54d6a318b7c04daf52940f941536ec54" title="Counts the total 3&#45;in&#45;a&#45;row patterns for both X and O." alt="" coords="214,5,364,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="166,24,201,26,196,27,166,29"/>
+</map>

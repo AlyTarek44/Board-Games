@@ -1,0 +1,5 @@
+<map id="SUS_Board" name="SUS_Board">
+<area shape="rect" id="Node000001" title="3x3 Board with scoring logic for S&#45;U&#45;S sequences." alt="" coords="5,421,143,747"/>
+<area shape="rect" id="Node000002" href="$class_board.html" title=" " alt="" coords="8,5,140,373"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="75,385,77,422,72,421,74,391"/>
+</map>

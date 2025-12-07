@@ -1,0 +1,7 @@
+<map id="FourInRow_Board::is_valid_move" name="FourInRow_Board::is_valid_move">
+<area shape="rect" id="Node000001" title="Validates if a move can be made in the given column." alt="" coords="406,5,550,48"/>
+<area shape="rect" id="Node000002" href="$class_four_in_row___board.html#a220165086096e458797af28e7bbeb9e6" title="Returns a list of all valid column indices." alt="" coords="206,5,358,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="388,27,358,29,358,24,393,27"/>
+<area shape="rect" id="Node000003" href="$class_four_in_row___board.html#a776ccbae895273eb87a116559bf125d4" title="Determines the best move for the AI using Minimax." alt="" coords="5,5,158,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="187,27,158,29,158,24,193,26"/>
+</map>

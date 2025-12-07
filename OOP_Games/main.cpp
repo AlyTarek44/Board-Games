@@ -1,3 +1,11 @@
+/**
+ * @file main.cpp
+ * @brief Main entry point for the Game Center application.
+ *
+ * This file contains the main menu and functions to initialize and run
+ * different board game variants. It handles memory management for game components.
+ */
+
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
@@ -17,22 +25,18 @@
 #include "Obstacles_Tic-Tac-Toe.h"
 #include "FourByFour_Classes.h"
 
-
 using namespace std;
 
+/**
+ * @brief Runs the Numerical Tic-Tac-Toe game.
+ */
 void run_numerical_ttt() {
     srand(time(0));
-
     Board<int> *board = new NumTTT_Board();
-
     UI<int> *ui = new NumTTT_UI(static_cast<NumTTT_Board *>(board));
-
     Player<int> **players = ui->setup_players();
-
     GameManager<int> gm(board, players, ui);
-
     gm.run();
-
     delete board;
     delete ui;
     delete players[0];
@@ -40,243 +44,220 @@ void run_numerical_ttt() {
     delete[] players;
 }
 
+/**
+ * @brief Runs the Standard Tic-Tac-Toe game (XO).
+ */
 void run_XO() {
     srand(static_cast<unsigned int>(time(0)));
-
     UI<char> *game_ui = new XO_UI();
-
     Board<char> *xo_board = new X_O_Board();
-
     Player<char> **players = game_ui->setup_players();
-
     GameManager<char> x_o_game(xo_board, players, game_ui);
-
     x_o_game.run();
-
     delete xo_board;
     delete game_ui;
-
-    for (int i = 0; i < 2; ++i) {
-        delete players[i];
-    }
+    for (int i = 0; i < 2; ++i) delete players[i];
     delete[] players;
 }
 
+/**
+ * @brief Runs the Four-in-a-Row game.
+ */
 void run_FourInRow() {
     srand(static_cast<unsigned int>(time(0)));
-
     FourInRow_Board *four_board = new FourInRow_Board();
-
     FourInRow_UI *four_ui = new FourInRow_UI(four_board);
-
     Player<char> **players = four_ui->setup_players();
-
     GameManager<char> four_game(four_board, players, four_ui);
-
     four_game.run();
-
     delete four_board;
     delete four_ui;
-    for (int i = 0; i < 2; ++i) {
-        delete players[i];
-    }
+    for (int i = 0; i < 2; ++i) delete players[i];
     delete[] players;
 }
 
+/**
+ * @brief Runs the 5x5 Tic-Tac-Toe game.
+ */
 void run_FiveXFiveTTT() {
     srand(static_cast<unsigned int>(time(0)));
-    Board<char>*FxFBoard = new FxFTTT_board;
-    UI<char>*game_ui = new FxFTTT_ui;
+    Board<char> *FxFBoard = new FxFTTT_board;
+    UI<char> *game_ui = new FxFTTT_ui;
     Player<char> **players = game_ui->setup_players();
     GameManager<char> game_f(FxFBoard, players, game_ui);
     game_f.run();
     delete FxFBoard;
     delete game_ui;
-    for (int i = 0; i < 2; ++i) {
-        delete players[i];
-    }
+    for (int i = 0; i < 2; ++i) delete players[i];
     delete[] players;
 }
+
+/**
+ * @brief Runs Word Tic-Tac-Toe.
+ */
 void run_word_ttt() {
     srand(static_cast<unsigned int>(time(0)));
     word_xo_board *word_board = new word_xo_board();
-    UI<char>* game_ui = new word_xo_ui(word_board);
+    UI<char> *game_ui = new word_xo_ui(word_board);
     Player<char> **players = game_ui->setup_players();
     GameManager<char> game_f(word_board, players, game_ui);
     game_f.run();
     delete word_board;
     delete game_ui;
-    for (int i = 0; i < 2; ++i) {
-        delete players[i];
-    }
+    for (int i = 0; i < 2; ++i) delete players[i];
     delete[] players;
-
 }
+
+/**
+ * @brief Runs Misere Tic-Tac-Toe (Loser wins).
+ */
 void run_Misere() {
     srand(static_cast<unsigned int>(time(0)));
-
     Misere_Board *board = new Misere_Board();
     Misere_UI *ui = new Misere_UI(board);
-
     Player<char> **players = ui->setup_players();
-
     GameManager<char> gm(board, players, ui);
-
     gm.run();
-
     delete board;
     delete ui;
     delete players[0];
     delete players[1];
     delete[] players;
 }
+
+/**
+ * @brief Runs SUS game.
+ */
 void run_SUS() {
     srand(static_cast<unsigned int>(time(0)));
-
     SUS_Board *sus_board = new SUS_Board();
-
     SUS_UI *sus_ui = new SUS_UI(static_cast<SUS_Board *>(sus_board));
-
     Player<char> **players = sus_ui->setup_players();
-
     GameManager<char> sus_game(sus_board, players, sus_ui);
-
     sus_game.run();
-
     delete sus_board;
     delete sus_ui;
-    for (int i = 0; i < 2; ++i) {
-        delete players[i];
-    }
+    for (int i = 0; i < 2; ++i) delete players[i];
     delete[] players;
 }
+
+/**
+ * @brief Runs the 4x4 Tic-Tac-Toe variant.
+ */
 void run_FourByFour() {
     srand(static_cast<unsigned int>(time(0)));
     FourByFour_Board *board = new FourByFour_Board();
     FourByFour_UI *ui = new FourByFour_UI(board);
-
     Player<char> **players = ui->setup_players();
-
     GameManager<char> gm(board, players, ui);
     gm.run();
-
     delete board;
     delete ui;
-    for (int i = 0; i < 2; ++i) {
-        delete players[i];
-    }
+    for (int i = 0; i < 2; ++i) delete players[i];
     delete[] players;
-
 }
+
+/**
+ * @brief Runs Pyramid Tic-Tac-Toe.
+ */
 void run_Pyramid() {
     srand(static_cast<unsigned int>(time(0)));
-
     Pyramid_Board *board = new Pyramid_Board();
     Pyramid_UI *ui = new Pyramid_UI(board);
-
     Player<char> **players = ui->setup_players();
-
     GameManager<char> gm(board, players, ui);
-
     gm.run();
-
     delete board;
     delete ui;
-    for (int i = 0; i < 2; ++i) {
-        delete players[i];
-    }
+    for (int i = 0; i < 2; ++i) delete players[i];
     delete[] players;
 }
+
+/**
+ * @brief Runs Infinity Tic-Tac-Toe.
+ */
 void run_infinite() {
     srand(static_cast<unsigned int>(time(0)));
-
     UI<char> *game_ui = new XO_UI();
-
     Board<char> *xo_board = new inf_xo_Board;
-
     Player<char> **players = game_ui->setup_players();
-
     GameManager<char> x_o_game(xo_board, players, game_ui);
-
     x_o_game.run();
-
     delete xo_board;
     delete game_ui;
-
-    for (int i = 0; i < 2; ++i) {
-        delete players[i];
-    }
+    for (int i = 0; i < 2; ++i) delete players[i];
     delete[] players;
 }
 
+/**
+ * @brief Runs Diamond Tic-Tac-Toe.
+ */
 void run_Diamond() {
     srand(static_cast<unsigned int>(time(0)));
-
     Diamond_Board *board = new Diamond_Board();
     Diamond_UI *ui = new Diamond_UI(board);
-
     Player<char> **players = ui->setup_players();
-
     GameManager<char> gm(board, players, ui);
-
     gm.run();
-
     delete board;
     delete ui;
     delete players[0];
     delete players[1];
     delete[] players;
 }
+
+/**
+ * @brief Runs Obstacles Tic-Tac-Toe.
+ */
 void run_Obstacles() {
     srand(static_cast<unsigned int>(time(0)));
     obstacles_TTT_board *board = new obstacles_TTT_board();
     obstacles_TTT_UI *ui = new obstacles_TTT_UI(board);
-
     Player<char> **players = ui->setup_players();
-
     GameManager<char> gm(board, players, ui);
     gm.run();
-
-
     delete board;
     delete ui;
-    for (int i = 0; i < 2; ++i) {
-        delete players[i];
-    }
+    for (int i = 0; i < 2; ++i) delete players[i];
     delete[] players;
 }
+
+/**
+ * @brief Runs Ultimate Tic-Tac-Toe.
+ */
 void run_Ultimate() {
-    srand((unsigned)time(0));
+    srand((unsigned) time(0));
     Ultimate_Board *board = new Ultimate_Board();
     Ultimate_UI *ui = new Ultimate_UI(board);
     Player<char> **players = ui->setup_players();
     GameManager<char> gm(board, players, ui);
     gm.run();
-    delete board; delete ui; delete players[0]; delete players[1]; delete[] players;
-}
-
-void run_Memory() {
-    srand(static_cast<unsigned int>(time(0)));
-
-    Memory_Board *memory_board = new Memory_Board();
-    Memory_UI *memory_ui = new Memory_UI(memory_board);
-    Player<char> **players = memory_ui->setup_players();
-
-    // Use the custom run function
-    memory_ui->run_game(players);
-
-    delete memory_board;
-    delete memory_ui;
-    for (int i = 0; i < 2; ++i) {
-        delete players[i];
-    }
+    delete board;
+    delete ui;
+    delete players[0];
+    delete players[1];
     delete[] players;
 }
 
+/**
+ * @brief Runs Memory Tic-Tac-Toe.
+ */
+void run_Memory() {
+    srand(static_cast<unsigned int>(time(0)));
+    Memory_Board *memory_board = new Memory_Board();
+    Memory_UI *memory_ui = new Memory_UI(memory_board);
+    Player<char> **players = memory_ui->setup_players();
+    memory_ui->run_game(players);
+    delete memory_board;
+    delete memory_ui;
+    for (int i = 0; i < 2; ++i) delete players[i];
+    delete[] players;
+}
 
-
-
-
+/**
+ * @brief Main function. Displays the menu and processes user input.
+ * @return 0 upon successful execution.
+ */
 int main() {
     int choice;
 
@@ -310,37 +291,38 @@ int main() {
         }
 
         switch (choice) {
-            case 1:run_numerical_ttt(); break;
-
-            case 2:run_XO(); break;
-
-            case 3:run_FourInRow(); break;
-
-            case 4:run_FiveXFiveTTT();break;
-
-            case 5:run_word_ttt();break;
-
-            case 6:run_Misere(); break;
-
-            case 7:run_SUS(); break;
-
-            case 8: run_Pyramid(); break;
-
-            case 9:run_infinite(); break;
-
-            case 10:run_Diamond(); break;
-
-            case 11:run_Ultimate(); break;
-
-            case 12:run_Memory(); break;
-
-            case 13:run_Obstacles(); break;
-            case 14:run_FourByFour(); break;
-
-            case 0:cout << "Goodbye!\n";return 0;
-
+            case 1: run_numerical_ttt();
+                break;
+            case 2: run_XO();
+                break;
+            case 3: run_FourInRow();
+                break;
+            case 4: run_FiveXFiveTTT();
+                break;
+            case 5: run_word_ttt();
+                break;
+            case 6: run_Misere();
+                break;
+            case 7: run_SUS();
+                break;
+            case 8: run_Pyramid();
+                break;
+            case 9: run_infinite();
+                break;
+            case 10: run_Diamond();
+                break;
+            case 11: run_Ultimate();
+                break;
+            case 12: run_Memory();
+                break;
+            case 13: run_Obstacles();
+                break;
+            case 14: run_FourByFour();
+                break;
+            case 0: cout << "Goodbye!\n";
+                return 0;
             default:
-                cout << "Invalid choice. Please select [1,2,3,4,5,6,7,8,9,10,11,12,13,14,0].\n";
+                cout << "Invalid choice. Please select [1-14 or 0].\n";
         }
     }
 }

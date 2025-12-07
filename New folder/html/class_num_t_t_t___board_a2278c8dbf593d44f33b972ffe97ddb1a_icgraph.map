@@ -1,0 +1,5 @@
+<map id="NumTTT_Board::is_draw" name="NumTTT_Board::is_draw">
+<area shape="rect" id="Node000001" title="Checks draw condition." alt="" coords="208,13,375,40"/>
+<area shape="rect" id="Node000002" href="$class_num_t_t_t___board.html#a6df8a421a1e259773ae8349232b3dcb0" title="Checks if game is over." alt="" coords="5,5,160,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="189,27,160,29,160,24,195,26"/>
+</map>

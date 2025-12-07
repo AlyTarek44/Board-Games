@@ -1,0 +1,9 @@
+<map id="FourInRow_UI::create_player" name="FourInRow_UI::create_player">
+<area shape="rect" id="Node000001" title="Creates a player (Human or Computer)." alt="" coords="455,5,606,48"/>
+<area shape="rect" id="Node000002" href="$class_four_in_row___u_i.html#abe7486ed4e7ca4a3306b25d3c7fcb419" title="Sets up the two players." alt="" coords="261,5,407,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="437,27,407,29,407,24,442,27"/>
+<area shape="rect" id="Node000003" href="$main_8cpp.html#a3fbd15ad43407078299f5560a42ed875" title="Runs the Four&#45;in&#45;a&#45;Row game." alt="" coords="103,13,213,40"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="243,27,213,29,213,24,248,27"/>
+<area shape="rect" id="Node000004" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Main function. Displays the menu and processes user input." alt="" coords="5,13,55,40"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="85,28,55,29,55,24,89,26"/>
+</map>

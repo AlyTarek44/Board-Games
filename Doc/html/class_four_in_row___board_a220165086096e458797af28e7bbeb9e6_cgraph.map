@@ -1,0 +1,5 @@
+<map id="FourInRow_Board::get_valid_moves" name="FourInRow_Board::get_valid_moves">
+<area shape="rect" id="Node000001" title="Returns a list of all valid column indices." alt="" coords="5,5,158,48"/>
+<area shape="rect" id="Node000002" href="$class_four_in_row___board.html#a78af1689db907b296f8332a90a7a6676" title="Validates if a move can be made in the given column." alt="" coords="206,5,350,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="158,24,193,26,187,27,158,29"/>
+</map>

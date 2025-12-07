@@ -1,0 +1,9 @@
+<map id="Diamond_UI::get_move" name="Diamond_UI::get_move">
+<area shape="rect" id="Node000001" title="Ask the user (or AI) to make a move." alt="" coords="5,31,165,57"/>
+<area shape="rect" id="Node000002" href="$class_player.html#af56f0bf98c0423a3a75b0848607d03a4" title="Get the player&#39;s symbol." alt="" coords="217,5,350,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="164,31,204,29,199,30,165,36"/>
+<area shape="rect" id="Node000003" href="$_diamond_t_t_t___classes_8cpp.html#a885750bc06567901f975d9139569da83" title=" " alt="" coords="213,56,354,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="165,51,200,58,195,59,165,57"/>
+<area shape="rect" id="Node000004" href="$class_board.html#a117f2e61fdb7deccca333bbbc9c62d3a" title="Return a copy of the current board as a 2D vector." alt="" coords="402,56,565,83"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="354,67,389,69,384,69,354,72"/>
+</map>

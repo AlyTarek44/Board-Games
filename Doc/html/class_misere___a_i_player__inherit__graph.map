@@ -1,0 +1,5 @@
+<map id="Misere_AIPlayer" name="Misere_AIPlayer">
+<area shape="rect" id="Node000001" title="Smart AI for Misere Tic&#45;Tac&#45;Toe." alt="" coords="5,315,141,427"/>
+<area shape="rect" id="Node000002" href="$class_player.html" title=" " alt="" coords="18,5,129,267"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="74,279,76,316,71,315,72,284"/>
+</map>

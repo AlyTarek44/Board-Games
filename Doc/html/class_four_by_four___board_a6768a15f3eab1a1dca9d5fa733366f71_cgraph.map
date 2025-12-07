@@ -1,0 +1,7 @@
+<map id="FourByFour_Board::is_win" name="FourByFour_Board::is_win">
+<area shape="rect" id="Node000001" title="Checks if player has won (3&#45;in&#45;a&#45;row)." alt="" coords="5,43,181,69"/>
+<area shape="rect" id="Node000002" href="$class_four_by_four___board.html#a649373e4cb96663ec8dcd280586421ac" title="Checks if a specific symbol has a winning line." alt="" coords="229,5,402,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="181,42,216,40,211,41,182,47"/>
+<area shape="rect" id="Node000003" href="$class_player.html#af56f0bf98c0423a3a75b0848607d03a4" title="Get the player&#39;s symbol." alt="" coords="249,72,382,99"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="181,65,236,74,230,75,181,70"/>
+</map>

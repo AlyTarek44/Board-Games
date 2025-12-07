@@ -1,0 +1,9 @@
+<map id="word_xo_board::find_best_move" name="word_xo_board::find_best_move">
+<area shape="rect" id="Node000001" title="Finds the best move for AI. Tries to find a winning move, or block an opponent&#39;s winning move." alt="" coords="5,48,144,91"/>
+<area shape="rect" id="Node000002" href="$classword__xo__board.html#a86ea252e6e066266cdf2c38272283c1f" title="Checks if any line on the board forms a valid word." alt="" coords="196,5,392,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="143,51,221,35,216,37,145,56"/>
+<area shape="rect" id="Node000003" href="$classword__xo__board.html#a38bb01f635d788e03a3a61ebdeaef9f9" title=" " alt="" coords="192,56,397,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="144,67,179,69,174,70,144,72"/>
+<area shape="rect" id="Node000004" href="$classword__xo__board.html#af0f7eb5717b568cc082d3b097660ef68" title=" " alt="" coords="202,107,386,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="144,83,221,102,216,103,144,88"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="Diamond_Board" name="Diamond_Board">
+<area shape="rect" id="Node000001" title="Represents the diamond&#45;shaped board." alt="" coords="5,421,174,747"/>
+<area shape="rect" id="Node000002" href="$class_board.html" title=" " alt="" coords="24,5,156,373"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="90,385,92,422,87,421,89,391"/>
+</map>

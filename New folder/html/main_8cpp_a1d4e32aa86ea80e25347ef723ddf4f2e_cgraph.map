@@ -1,0 +1,9 @@
+<map id="run_Diamond" name="run_Diamond">
+<area shape="rect" id="Node000001" title="Runs Diamond Tic&#45;Tac&#45;Toe." alt="" coords="5,31,104,57"/>
+<area shape="rect" id="Node000002" href="$class_game_manager.html#a71f46d5189dac5c773f608cea1b5a203" title="Run the main game loop until someone wins or the game ends." alt="" coords="177,5,310,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="104,35,164,28,159,31,105,40"/>
+<area shape="rect" id="Node000004" href="$class_diamond___u_i.html#a2618c730d7c0d17b1e3f7897a822509d" title="Set up players for the game." alt="" coords="152,56,335,83"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="104,48,139,54,133,55,104,53"/>
+<area shape="rect" id="Node000003" href="$class_player.html#aed2af19790ba73190e3ebeea589518e1" title="Get the player&#39;s name." alt="" coords="383,5,506,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="310,16,370,18,365,19,310,21"/>
+</map>

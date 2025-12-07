@@ -1,0 +1,5 @@
+<map id="Memory_UI" name="Memory_UI">
+<area shape="rect" id="Node000001" title="UI that handles the timed reveal and screen clearing mechanics." alt="" coords="12,293,167,469"/>
+<area shape="rect" id="Node000002" href="$class_u_i.html" title=" " alt="" coords="5,5,174,245"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="91,258,92,294,87,293,89,263"/>
+</map>

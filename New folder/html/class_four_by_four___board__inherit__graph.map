@@ -1,0 +1,5 @@
+<map id="FourByFour_Board" name="FourByFour_Board">
+<area shape="rect" id="Node000001" title="Logic for 4x4 Sliding Tic&#45;Tac&#45;Toe." alt="" coords="5,421,170,704"/>
+<area shape="rect" id="Node000002" href="$class_board.html" title=" " alt="" coords="22,5,154,373"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="88,386,90,422,85,421,87,391"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="Memory_Board" name="Memory_Board">
+<area shape="rect" id="Node000001" title="A 3x3 Board that manages hidden vs. real states." alt="" coords="5,421,181,640"/>
+<area shape="rect" id="Node000002" href="$class_board.html" title=" " alt="" coords="27,5,159,373"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="94,385,96,422,91,421,93,391"/>
+</map>

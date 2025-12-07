@@ -1,0 +1,14 @@
+<map id="XO_Classes.h" name="XO_Classes.h">
+<area shape="rect" id="Node000001" title="Defines the X&#45;O (Tic&#45;Tac&#45;Toe) specific classes that extend the generic board game framework." alt="" coords="222,5,328,32"/>
+<area shape="rect" id="Node000002" href="$_infinity___tic-_tac-_toe_8h.html" title="Header file for Infinity Tic&#45;Tac&#45;Toe." alt="" coords="43,80,189,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="231,40,145,82,143,77,235,37"/>
+<area shape="rect" id="Node000004" href="$main_8cpp.html" title="Main entry point for the Game Center application." alt="" coords="190,155,264,181"/>
+<area shape="poly" id="edge5_Node000001_Node000004" title=" " alt="" coords="266,45,255,81,232,156,228,153,250,79,262,48"/>
+<area shape="rect" id="Node000005" href="$_x_o___classes_8cpp.html" title=" " alt="" coords="264,80,384,107"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="293,43,318,80,313,79,291,48"/>
+<area shape="rect" id="Node000006" href="$word___tic-_tac-_toe_8cpp.html" title="Implementation of Word Tic&#45;Tac&#45;Toe." alt="" coords="408,80,558,107"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="326,35,449,79,444,80,325,40"/>
+<area shape="rect" id="Node000003" href="$_infinity___tic-_tac-_toe_8cpp.html" title="Implementation of Infinity Tic&#45;Tac&#45;Toe mechanics." alt="" coords="5,155,166,181"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="107,120,93,156,89,153,103,123"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="149,113,210,154,205,154,147,118"/>
+</map>

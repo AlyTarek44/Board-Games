@@ -1,0 +1,17 @@
+<map id="FourInRow_Classes.h" name="FourInRow_Classes.h">
+<area shape="rect" id="Node000001" title="Header file for the Four&#45;in&#45;a&#45;Row game classes." alt="" coords="64,5,216,32"/>
+<area shape="rect" id="Node000002" href="$_board_game___classes_8h.html" title=" " alt="" coords="120,80,277,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="151,30,182,68,176,68,150,35"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,155,59,181"/>
+<area shape="poly" id="edge7_Node000001_Node000003" title=" " alt="" coords="133,34,52,144,48,141,129,31"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="83,155,141,181"/>
+<area shape="poly" id="edge6_Node000001_Node000004" title=" " alt="" coords="133,30,121,55,111,81,107,111,109,140,104,139,102,111,105,79,116,53,129,35"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="302,80,376,107"/>
+<area shape="poly" id="edge8_Node000001_Node000007" title=" " alt="" coords="175,30,292,73,287,75,174,35"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="171,110,74,151,72,147,169,105"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="186,106,140,147,137,142,181,108"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="164,155,236,181"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="201,105,202,140,197,138,197,109"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="260,155,326,181"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="216,105,268,145,262,145,214,110"/>
+</map>

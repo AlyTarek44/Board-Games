@@ -1,0 +1,9 @@
+<map id="NumTTT_UI::setup_players" name="NumTTT_UI::setup_players">
+<area shape="rect" id="Node000001" title="Setup players." alt="" coords="5,56,189,83"/>
+<area shape="rect" id="Node000002" href="$class_num_t_t_t___u_i.html#a96407118d65365c595ed720dcb7fdc5d" title="Creates a player for Numerical TTT." alt="" coords="237,5,417,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="160,53,250,35,246,37,162,58"/>
+<area shape="rect" id="Node000003" href="$class_u_i.html#a7b1603de1f73fbb4006e4f00a27c44da" title=" " alt="" coords="237,56,417,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="188,67,224,69,218,70,189,72"/>
+<area shape="rect" id="Node000004" href="$class_u_i.html#ac3d45fea2bbcaa0372d8e5101e116ca1" title=" " alt="" coords="256,107,398,149"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="152,81,243,105,238,107,152,86"/>
+</map>

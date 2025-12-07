@@ -1,0 +1,7 @@
+<map id="X_O_Board::is_draw" name="X_O_Board::is_draw">
+<area shape="rect" id="Node000001" title="Checks if the game has ended in a draw." alt="" coords="5,5,147,32"/>
+<area shape="rect" id="Node000002" href="$class_x___o___board.html#aafb56a8db5bf8352157326a52c06e2e6" title="Checks if the given player has won the game." alt="" coords="195,5,328,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="147,16,182,19,177,19,147,21"/>
+<area shape="rect" id="Node000003" href="$class_player.html#af56f0bf98c0423a3a75b0848607d03a4" title="Get the player&#39;s symbol." alt="" coords="376,5,509,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="328,16,363,19,358,19,328,21"/>
+</map>

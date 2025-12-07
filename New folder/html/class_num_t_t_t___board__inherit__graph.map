@@ -1,0 +1,5 @@
+<map id="NumTTT_Board" name="NumTTT_Board">
+<area shape="rect" id="Node000001" title="3x3 Board for integers. Checks for sum=15." alt="" coords="9,421,134,640"/>
+<area shape="rect" id="Node000002" href="$class_board.html" title=" " alt="" coords="5,5,137,373"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="72,385,74,422,69,421,71,391"/>
+</map>

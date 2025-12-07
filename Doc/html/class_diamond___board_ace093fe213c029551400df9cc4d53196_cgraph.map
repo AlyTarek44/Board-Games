@@ -1,0 +1,11 @@
+<map id="Diamond_Board::update_board" name="Diamond_Board::update_board">
+<area shape="rect" id="Node000001" title="Updates board with player move." alt="" coords="5,73,167,116"/>
+<area shape="rect" id="Node000002" href="$class_move.html#a595bf740852c05a1cb425ef2640fd4ff" title="Get the move symbol." alt="" coords="239,5,367,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="138,70,214,41,239,36,234,38,216,47,140,75"/>
+<area shape="rect" id="Node000003" href="$class_move.html#a9d4f543a81e361f872d37bcfb64d5b55" title="Get row index." alt="" coords="256,56,350,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="166,83,243,75,238,78,168,88"/>
+<area shape="rect" id="Node000004" href="$class_move.html#a96469802a55c9083a1e93c7edec8a00c" title="Get column index." alt="" coords="256,107,350,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="167,101,243,112,238,114,167,107"/>
+<area shape="rect" id="Node000005" href="$class_diamond___board.html#a2d59e385450ce16357cbc16e92a2aa65" title="Checks if a coordinate is within the diamond shape." alt="" coords="215,157,391,184"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="139,114,216,143,239,153,234,152,214,148,139,119"/>
+</map>

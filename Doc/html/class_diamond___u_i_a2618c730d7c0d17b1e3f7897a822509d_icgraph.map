@@ -1,0 +1,7 @@
+<map id="Diamond_UI::setup_players" name="Diamond_UI::setup_players">
+<area shape="rect" id="Node000001" title="Set up players for the game." alt="" coords="249,5,432,32"/>
+<area shape="rect" id="Node000002" href="$main_8cpp.html#a1d4e32aa86ea80e25347ef723ddf4f2e" title="Runs Diamond Tic&#45;Tac&#45;Toe." alt="" coords="103,5,201,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="231,19,201,21,201,16,236,19"/>
+<area shape="rect" id="Node000003" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Main function. Displays the menu and processes user input." alt="" coords="5,5,55,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="84,20,55,21,55,16,90,18"/>
+</map>

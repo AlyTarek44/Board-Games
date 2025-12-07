@@ -1,0 +1,6 @@
+<map id="Pyramid_Board::minimax" name="Pyramid_Board::minimax">
+<area shape="rect" id="Node000001" title="The Minimax recursive algorithm." alt="" coords="190,29,357,56"/>
+<area shape="poly" id="edge2_Node000001_Node000001" title=" " alt="" coords="306,14,296,10,273,8,252,10,241,15,239,20,244,30,239,28,233,21,237,11,251,5,273,3,297,5,311,14"/>
+<area shape="rect" id="Node000002" href="$class_pyramid___board.html#af430ff09c33d83678fe311c38f2e0e47" title="Computes the best move for the AI using Minimax." alt="" coords="5,21,142,64"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="172,43,142,45,142,40,177,42"/>
+</map>

@@ -1,12 +1,12 @@
-/**
- * @file FiveXFiveTTT_Classes.cpp
- * @brief Implementation of 5x5 Tic-Tac-Toe logic.
- */
-
+//
+// Created by Ali Tarek on 23/11/2025.
+////--------------------------------------- IMPLEMENTATION
 #include "FiveXFiveTTT_Classes.h"
 #include <iostream>
 #include <iomanip>
-#include <cctype>
+#include <cctype>  // for toupper()
+
+
 
 FxFTTT_board :: FxFTTT_board() : Board(5, 5) {
   for (auto& row : board){
@@ -16,10 +16,12 @@ FxFTTT_board :: FxFTTT_board() : Board(5, 5) {
   }
 }
 
+
 bool FxFTTT_board::update_board(Move<char>* move) {
   int x = move->get_x();
   int y = move->get_y();
   char mark = move->get_symbol();
+
 
   if (x >= 0 && x < rows && y >= 0 && y < columns && board[x][y] == blank_symbol) {
     n_moves++;
@@ -29,114 +31,145 @@ bool FxFTTT_board::update_board(Move<char>* move) {
   return false;
 }
 
-/**
- * @brief Iterates through Rows, Cols, and Diagonals to count 3-in-a-row patterns.
- * @return 1 if X wins count, -1 if O wins count, 0 if draw.
- */
-int FxFTTT_board :: check_all_lines(){
+  int FxFTTT_board :: check_all_lines(){
+
     int sum_x=0, sum_o=0;
 
+
     auto all_equal = [&](char a, char b, char c) {
-        return a == b && b == c && a != blank_symbol;
+    return a == b && b == c && a != blank_symbol;
+
     };
 
-    // Check rows
-    for(int i=0;i<rows;i++){
-        for(int j=0;j+2<columns;j++){
-            if(all_equal(board[i][j], board[i][j+1], board[i][j+2] )){
-                if ( board[i][j]== 'X'){sum_x++;}
-                else if ( board[i][j] == 'O' ){sum_o++;}
-            }
-        }
+    //check rows
+  for(int i=0;i<rows;i++){
+
+    for(int j=0;j+2<columns;j++){
+
+
+
+      if(all_equal(board[i][j], board[i][j+1], board[i][j+2] )){
+
+        if ( board[i][j]== 'X'){sum_x++;}
+
+        else if ( board[i][j] == 'O' ){sum_o++;}
+      }
     }
-    // Check columns
-    for(int j=0;j<columns;j++){
-        for(int i=0;i+2<rows;i++){
-            if(all_equal(board[i][j], board[i+1][j], board[i+2][j] )){
-                if ( board[i][j] == 'X'){sum_x++;}
-                else if ( board[i][j] == 'O' ){sum_o++;}
-            }
-        }
+}
+  //check columns
+  for(int j=0;j<columns;j++){
+
+    for(int i=0;i+2<rows;i++){
+
+
+
+      if(all_equal(board[i][j], board[i+1][j], board[i+2][j] )){
+        if ( board[i][j] == 'X'){sum_x++;}
+        else if ( board[i][j] == 'O' ){sum_o++;}
+      }
+     }
     }
 
-    // Check main diagonal
-    for (int i=0;i+2<rows;i++){
-        for (int j=0;j+2<columns;j++){
-            if(all_equal(board[i][j], board[i+1][j+1], board[i+2][j+2] )){
-                if ( board[i][j] == 'X'){sum_x++;}
-                else if ( board[i][j] == 'O' ){sum_o++;}
-            }
-        }
-    }
-    // Check anti diagonal
-    for (int j=columns-1;j-2>=0;j--){
-        for (int i=0;i+2<rows;i++){
-            if(all_equal(board[i][j], board[i+1][j-1], board[i+2][j-2] )){
-                if ( board[i][j] == 'X'){sum_x++;}
-                else if ( board[i][j] == 'O' ){sum_o++;}
-            }
-        }
-    }
-
-    if (sum_x==sum_o) {return 0;}
-    if (sum_x>sum_o) {return 1;}
-    if (sum_x<sum_o) {return -1;}
-    return 0; // Default return
+  //check main diagonal
+ for (int i=0;i+2<rows;i++){
+   for (int j=0;j+2<columns;j++){
+     if(all_equal(board[i][j], board[i+1][j+1], board[i+2][j+2] )){
+       if ( board[i][j] == 'X'){sum_x++;}
+       else if ( board[i][j] == 'O' ){sum_o++;}
+     }
+   }
+ }
+ //check anti diagonal
+ for (int j=columns-1;j-2>=0;j--){
+   for (int i=0;i+2<rows;i++){
+     if(all_equal(board[i][j], board[i+1][j-1], board[i+2][j-2] )){
+       if ( board[i][j] == 'X'){sum_x++;}
+       else if ( board[i][j] == 'O' ){sum_o++;}
+     }
+   }
+ }
+if (sum_x==sum_o) {return 0;}
+if (sum_x>sum_o) {return 1;}
+if (sum_x<sum_o) {return -1;}
 }
 
+
 bool FxFTTT_board::is_draw(Player<char>* Player) {
-  if (n_moves < 24) return false;
+  if (n_moves < 24)
+    return false;
+
+
   int result = check_all_lines();
   return (result == 0);
 }
 
+
 bool FxFTTT_board::is_win(Player<char>* player) {
-  if (n_moves < 24) return false;
+  if (n_moves < 24)
+    return false;
 
   int result = check_all_lines();
-  if (player->get_symbol() == 'X') return result == 1;
-  if (player->get_symbol() == 'O') return result == -1;
+
+  if (player->get_symbol() == 'X')
+    return result == 1;
+
+  if (player->get_symbol() == 'O')
+    return result == -1;
 
   return false;
 }
+
+
 
 bool FxFTTT_board :: is_lose(Player<char>*player) {
   if (n_moves < 24){return false;}
 
+
   int result = check_all_lines();
-  if (player->get_symbol() == 'X') return result == -1;
-  if (player->get_symbol() == 'O') return result == 1;
+
+  if (player->get_symbol() == 'X')
+    return result == -1;
+
+  if (player->get_symbol() == 'O')
+    return result == 1;
 
   return false;
 }
 
-// --- UI Implementations ---
 
 FxFTTT_ui ::FxFTTT_ui() : UI<char>("Welcome to 5x5 tic tac toe by Ali",3) {}
+
 
 Player<char>* FxFTTT_ui::create_player(string& name, char symbol, PlayerType type ) {
   cout << "Creating " << (type == PlayerType::HUMAN ? "human" : "computer")
        << " player: " << name << " (" << symbol << ")\n";
+
   return new Player<char>(name, symbol, type);
 }
 
+
 Move<char>* FxFTTT_ui::get_move(Player<char>* player) {
     int x, y;
+
     if (player->get_type() == PlayerType::HUMAN) {
+
         string s;
         cout << "\nPlease enter your move x and y (0 to 4): ";
         cin >> s;
+
         while (s.size() != 2 || !isdigit(s[0]) || !isdigit(s[1])) {
             cout << "Invalid input! Enter exactly two digits (ex: 02, 40): ";
             cin >> s;
         }
+
         x = s[0] - '0';
         y = s[1] - '0';
     }
     else {
-        // AI Logic integration
+
         FxFTTT_board* board = dynamic_cast<FxFTTT_board*>(player->get_board_ptr());
         if (!board) {
+
             x = rand() % player->get_board_ptr()->get_rows();
             y = rand() % player->get_board_ptr()->get_columns();
         }
@@ -147,15 +180,19 @@ Move<char>* FxFTTT_ui::get_move(Player<char>* player) {
             cout << "\nAI chooses move: " << x << y << endl;
         }
     }
+
     return new Move<char>(x, y, player->get_symbol());
 }
 
+
 bool FxFTTT_board::game_is_over(Player<char>* player) {
-    if (n_moves == 24) return true;
+    if (n_moves == 24)
+        return true;
     return false;
 }
 
-// --- AI Functions Implementation ---
+
+//Ai functions
 
 std::vector<std::pair<int, int> > FxFTTT_board::get_available_moves() {
      vector<std::pair<int, int> > moves;
@@ -169,26 +206,42 @@ std::vector<std::pair<int, int> > FxFTTT_board::get_available_moves() {
   return moves;
 }
 
+
+
 void FxFTTT_board::simulate_move( int row, int col, char symbol) {
   board[row][col] = symbol;
   n_moves++;
 }
+
 
 void FxFTTT_board::undo_move(int row, int col) {
   board[row][col] = blank_symbol;
   n_moves--;
 }
 
+
+
 void FxFTTT_board::set_ai_symbols(char ai, char opp) {
     ai_symbol = ai;
     opp_symbol = opp;
 }
 
+
+
+
+//heuristic function
+
 int FxFTTT_board::evaluate_board() {
+
+
     int ai_score = 0, opp_score = 0;
+
+
+
     auto all_equal = [&](char a, char b, char c) {
         return a == b && b == c && a != blank_symbol;
     };
+
 
 
     // Check rows
@@ -201,6 +254,9 @@ int FxFTTT_board::evaluate_board() {
             }
         }
     }
+
+
+
     // Check columns
     for (int j = 0; j < columns; j++) {
         for (int i = 0; i + 2 < rows; i++) {
@@ -211,6 +267,9 @@ int FxFTTT_board::evaluate_board() {
             }
         }
     }
+
+
+
     // Check main diagonals
     for (int i = 0; i + 2 < rows; i++) {
         for (int j = 0; j + 2 < columns; j++) {
@@ -221,6 +280,9 @@ int FxFTTT_board::evaluate_board() {
             }
         }
     }
+
+
+
     // Check anti-diagonals
     for (int i = 0; i + 2 < rows; i++) {
         for (int j = 2; j < columns; j++) {
@@ -235,7 +297,15 @@ int FxFTTT_board::evaluate_board() {
     return ai_score - opp_score;
 }
 
+
+
+
+
+// --- Minimax function with depth limit 7 ---
+
+
 int FxFTTT_board::minimax(int depth, bool is_max, int alpha, int beta) {
+
     auto moves = get_available_moves();
 
     // Stop if no moves left or depth limit reached
@@ -268,6 +338,7 @@ int FxFTTT_board::minimax(int depth, bool is_max, int alpha, int beta) {
     }
 }
 
+
 std::pair<int,int> FxFTTT_board::find_best_move() {
     int best_val = -100000;
     std::pair<int,int> best_move = {-1,-1};
@@ -275,7 +346,7 @@ std::pair<int,int> FxFTTT_board::find_best_move() {
     int beta = 100000;
     for (auto& move : get_available_moves()) {
         simulate_move(move.first, move.second, ai_symbol);
-        int move_val = minimax(4, false, alpha, beta);
+        int move_val = minimax(7, false, alpha, beta);
         undo_move(move.first, move.second);
 
         if (move_val > best_val) {
@@ -284,5 +355,6 @@ std::pair<int,int> FxFTTT_board::find_best_move() {
             alpha = std::max(alpha, best_val);
         }
     }
+
     return best_move;
 }

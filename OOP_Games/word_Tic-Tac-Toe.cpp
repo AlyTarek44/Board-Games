@@ -47,7 +47,7 @@ bool word_xo_board::is_valid_word() {
         return a != blank_symbol && b != blank_symbol && c != blank_symbol;
     };
 
-    char ww[5]; // buffer for word
+    char ww[5];
 
     // Checking rows
     for (int i = 0 ; i < rows ; i++ ) {
@@ -189,7 +189,10 @@ Move<char>* word_xo_ui::get_move(Player<char>* player) {
     cout << player->get_name() << " enter letter: ";
     cin >> letter;
     letter = toupper(letter);
-    cout << "Enter row: "; cin >> x;
-    cout << "Enter column: "; cin >> y;
+     do {
+
+         cout<<"enter move . ex:{0 0 or 0 1} : "; cin>>x>>y;
+
+     }while (x > 2 || x < 0 || y > 2 || y < 0);
     return new Move<char>(x, y, letter);
 }

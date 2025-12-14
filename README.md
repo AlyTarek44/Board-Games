@@ -2,13 +2,14 @@
 ---
 ## 👥 Team & Work Breakdown
 
-| Name | GitHub | Games |
-|------|--------|-------|
-| Aly Tarek | @AlyTarek44 | 5×5 Tic-Tac-Toe, Word Tic-Tac-Toe |
-| Mohamed Farag | @Mohamed-Farag911 | 4×4 Tic-Tac-Toe, Pyramid Tic-Tac-Toe |
-| Abdelrahman Hamdy | @hamdy339 | SUS Tic-Tac-Toe, Four-in-a-Row |
-| Mohamed Khalid | @mohamedkhalid98 | Misère Tic-Tac-Toe, Diamond Tic-Tac-Toe |
-| **Group Contributions** | — | NUMTTT, Obstacles TTT, Infinity TTT, Ultimate TTT, Memory TTT |
+
+| Name | Games |
+|------|-------|
+| [Aly Tarek](https://github.com/AlyTarek44) | 5×5 Tic-Tac-Toe, Word Tic-Tac-Toe |
+| [Mohamed Farag](https://github.com/Mohamed-Farag911) | 4×4 Tic-Tac-Toe, Pyramid Tic-Tac-Toe |
+| [Abdelrahman Hamdy](https://github.com/hamdy339) | SUS Tic-Tac-Toe, Four-in-a-Row |
+| [Mohamed Khalid](https://github.com/mohamedkhalid98) | Misère Tic-Tac-Toe, Diamond Tic-Tac-Toe |
+| **Group Contributions** | NUMTTT, Obstacles TTT, Infinity TTT, Ultimate TTT, Memory TTT |
 
 
 👨‍🏫 *Supervisor:*  

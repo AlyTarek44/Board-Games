@@ -26,7 +26,7 @@
 
 ## 📘 Project Overview
 
-This repository contains a *comprehensive collection of board and puzzle games implemented in C++, developed as part of **CS213 – Object-Oriented Programming, Faculty of Computers and Artificial Intelligence, **Cairo University (2025–2026)*.
+This repository contains a *comprehensive collection of board and puzzle games implemented in C++, developed as part of **CS213 – Object-Oriented Programming, Faculty of Computers and Artificial Intelligence, Cairo University (2025–2026).***
 
 The project is built on a *shared, reusable game framework* and showcases advanced usage of *Object-Oriented Programming (OOP)* concepts such as inheritance, polymorphism, abstraction, and encapsulation across many different game variants.
 
